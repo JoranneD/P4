@@ -1,0 +1,113 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+/****** BODY / GENERAL ***********/
+.main-container {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    background-color: #D2D2D2;
+}
+
+/****** Les listes ***********/
+/* aucuns ne possedent de puces */
+li {
+    list-style-type: none;
+}
+
+/****** Les images ***********/
+/* toutes les images(element) ne depasse le cadre pas leur section(block) */
+section img {
+    width: 100%;
+}
+
+/****** Les titres ***********/
+/* tous sont en gras */
+/* h1, h2, h3, h4 {
+    font-weight: bold;
+} */
+
+/* tous possedent tous la meme police Shrikhand */
+h1, h2, h4 {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* sauf les h3 */
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+/****** Les boutons ***********/
+/* tous sont en gras */
+button {
+    color: #FFFFFF;
+    width: 70%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 30px;
+    font-size: 16px;
+}
+
+/****** HEADER ***********/
+/* tous les elements sont centrés */
+/* header (media queries) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} */
+
+header *  {
+    text-align: center;
+}
+/* tous les textes sont en  */
+
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+
+.header__location {
+    background-color: #EAEAEA;
+    padding: 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.header_location p {
+    font-size: 16px;
+}
+
+.header__reservation {
+    background-color: #F6F6F6;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__reservation p {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+
+/****** MAIN ***********/
+.main-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background-color: #FFFFFF;
+}
+
+
+
