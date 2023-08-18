@@ -1,7 +1,8 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    object-fit: cover;
 }
 
 /****** BODY / GENERAL ***********/
@@ -46,11 +47,14 @@ h3 {
 /* tous sont en gras */
 button {
     color: #FFFFFF;
+    border: none;
     width: 70%;
     height: 50px;
     border-radius: 25px;
     margin: 30px;
     font-size: 16px;
+    background: linear-gradient(#FF79DA,#9356DC);
+
 }
 
 /****** HEADER ***********/
@@ -64,8 +68,6 @@ button {
 header *  {
     text-align: center;
 }
-/* tous les textes sont en  */
-
 
 nav {
     background-color: #FFFFFF;
@@ -87,7 +89,7 @@ nav {
 
 .header__reservation {
     background-color: #F6F6F6;
-    padding: 15px;
+    padding: 30px; /* 15px */
     display:flex;
     flex-direction: column;
     gap: 10px;
@@ -102,12 +104,117 @@ nav {
 
 /****** MAIN ***********/
 .main-content {
+   background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/****** STEPS SECTION ***********/
+.steps__section {
+    background-color: #FFFFFF;
     padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 15px;
+}
+
+.steps__title {
+    margin-top: 15px;
+}
+
+.steps__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list__item {
+    height: 72px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+      
+}
+
+.item__description {
+    font-weight: bold;
+}
+
+.icon {
+    color: #7E7E7E;
+}
+
+/****** RESTAURANTS SECTION ***********/
+.restaurants__section {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.restaurants__title {
+    margin-top: 15px;
+}
+
+.restaurants__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards {
     background-color: #FFFFFF;
+    border-radius: 25px;
+    gap: 20px;
+
+}
+
+.cards_information {
+    padding: 15px;
+}
+
+.cards__image {
+    height: 231px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.cards__title {
+    font-size: 18px;
+}
+
+.cards__text {
+    font-size: 17px;
+    font-weight: lighter;
 }
 
 
 
+.footer__section {
+    background-color: #353535;
+    color: #FFFFFF;
+}
+
+.footer__title {
+    font-size: 18px;
+    padding: 15px 15px 0px 15px;
+    font-weight: normal;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+.footer__list__item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
