@@ -38,65 +38,73 @@
     <!-- MAIN -->
     <main class="main-content">
         <!-- STEPS SECTION -->
-        <section class="steps">
-            <h3>Fonctionnement</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</p>
+        <section class="steps__section">
+            <h3 class="steps__title">Fonctionnement</h3>
+            <ul class="steps__list">
+                <li class="list__item">
+                    <i class="icon fa-solid fa-mobile-screen-button"></i><p class="item__description"></i>Choisissez un restaurant</p>
                 </li>
-                <li>
-                    <p><i class="fa-solid fa-list"></i>Composez votre menu</p>
+                <li class="list__item">
+                    <i class="icon fa-solid fa-list"></i><p class="item__description">Composez votre menu</p>
                 </li>
-                <li>
-                    <p><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
+                <li class="list__item">
+                    <i class="icon fa-solid fa-store"></i><p class="item__description">Dégustez au restaurant</p>
                 </li>
             </ul>
         </section>
         
         <!-- RESTAURANTS SECTION -->
-        <section class="restaurants">
-            <h3>Restaurants</h3>
-            <div>
-                <article>
-                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat gastronomique">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
+        <section class="restaurants__section">
+            <h3 class="restaurants__title">Restaurants</h3>
+            <div class="restaurants__cards">
+                <article class="cards">
+                    <img class="cards__image" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat gastronomique">
+                    <div class="cards_information">
+                        <h3 class="cards__title">La palette du goût</h3>
+                        <p class="cards__text">Ménilmontant</p>
+                    </div>
                 </article>
-                <article>
-                    <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image d'un plat gastronomique">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+                <article class="cards">
+                    <img class="cards__image" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image d'un plat gastronomique">
+                    <div class="cards_information">
+                        <h3 class="cards__title">La note enchantée</h3>
+                        <p class="cards__text">Charonne</p>
+                    </div>
                 </article>
-                <article>
-                    <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image d'un plat gastronomique">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
+                <article class="cards">
+                    <img class="cards__image" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image d'un plat gastronomique">
+                    <div class="cards_information">
+                        <h3 class="cards__title">À la française</h3>
+                        <p class="cards__text">Cité Rouge</p>
+                    </div>
                 </article>
-                <article>
-                    <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image d'un plat gastronomique">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
+                <article class="cards">
+                    <img class="cards__image" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image d'un plat gastronomique">
+                    <div class="cards_information">
+                        <h3 class="cards__title">Le délice des sens</h3>
+                        <p class="cards__text">Folie-Méricourt</p>
+                    </div>
                 </article>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer__section">
         <div>
-             <h4>ohmyfood</h4>
+             <h4 class="footer__title">ohmyfood</h4>
         </div>
-        <ul>
-            <li>
-                <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+        <ul class="footer__list">
+            <li class="footer__list__item">
+                <i class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p>
             </li>
-            <li>
-                <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+            <li class="footer__list__item">
+                <i class="fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p>
             </li>
-            <li>
+            <li class="footer__list__item">
                 <p>Mentions légales</p>
             </li>
-            <li>
+            <li class="footer__list__item">
                 <p>Contact</p>
             </li>
         </ul>
