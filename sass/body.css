@@ -179,18 +179,20 @@ nav .title {
   gap: 15px;
   padding: 18px;
 }
-
-.restaurants__title {
+.restaurants .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
   margin-top: 15px;
 }
-
-.restaurants__cards {
+.restaurants .restaurants-cards {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
   gap: 20px;
 }
-
-.cards {
+.restaurants .restaurants-cards .cards {
   background-color: #FFFFFF;
   border-radius: 25px;
   gap: 20px;
