@@ -57,9 +57,7 @@ $purple : #9356DC;
     object-fit: cover;
 }
 
-.icon {
-    color: $grey;
-}
+
 
 /****** BODY / GENERAL ***********/
 .main-container {
@@ -129,57 +127,42 @@ nav {
 }
  
 .steps-list {
-    @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
-        .dot {
-            @include flex();
-            @include button($width:24px,$height:24px,$border:none,$radius:50%);
-            cursor: auto;
-            background-color: $purple;
-            position: relative;
-            top: 70px; left: -10px;
-            .icon-number {
-                            font-size: 10px;
-                            color: $white;
-                        }
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:0px);
+    margin-bottom: 50px;
+    .dot {
+        @include flex();
+        @include button($width:24px,$height:24px,$border:none,$radius:50%);
+        cursor: auto;
+        background-color: $purple;
+        .icon-number {
+            font-size: 10px;
+            color: $white;
         }
-        .steps-card {
-            background-color: #F6F6F6;
-            @include flex($gap:20px);
-            @extend %shadow;
-            height: 72px;
-            border-radius: 25px;
-                p {
-                    font-weight: bold;
-                }
-                
+    }
+    .dot-flexbox {
+        position: relative;
+        top: 50px; left: -10px;
+    }
+    .steps-card {
+        background-color: #F6F6F6;
+        @include flex($gap:25px);
+        @extend %shadow;
+        height: 72px;
+        border-radius: 25px;
+        .icon {
+            color: $grey;
+            font-size: 20px;
+            &:hover {
+                color: $purple;
+            }
         }
+        p {
+            font-weight: bold;
+        }      
+    }
 }
 
 
-
-// .dot {
-//     @include flex();
-//     @include button($width:24px,$height:24px,$border:none,$radius:50%);
-//     cursor: auto;
-//     background-color: #9356DC;
-// }
-//     .icon-number {
-//         font-size: 10px;
-//         color: $white;
-//     }
-
-
-// .dot {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 24px;
-//     width: 24px;
-//     border-radius: 50%;
-//     border: 1px solid #d3d3d3;
-//     font-size: 12px;
-// }
- 
 /****** MAIN - RESTAURANTS SECTION ***********/
 .restaurants {
     @include flex($direction:column,$align:normal);
