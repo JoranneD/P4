@@ -1,1 +1,236 @@
-/*# sourceMappingURL=body.css.map */
+@charset "UTF-8";
+/****** GLOBAL ***********/
+* {
+  /* Polices */
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  /* Reset des marges internes et externes */
+  margin: 0;
+  padding: 0;
+  /* Suppression des puces des listes */
+  list-style-type: none;
+  /* Images */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.icon {
+  color: #7E7E7E;
+}
+
+/****** BODY / GENERAL ***********/
+.main-container {
+  min-width: 375px;
+  max-width: 1440px;
+  margin: auto;
+  gap: 30px;
+  background-color: #D2D2D2;
+}
+
+/****** HEADER ***********/
+header * {
+  text-align: center;
+}
+
+nav {
+  background-color: #FFFFFF;
+  padding: 15px;
+}
+nav .title {
+  font-family: "Shrikhand", "cursive";
+  font-size: 30px;
+  font-weight: normal;
+  /* j'ai uniquement mis le parametre à modifier)*/
+}
+
+.location {
+  background-color: #EAEAEA;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  /* j'ai uniquement mis le parametre à modifier)*/
+}
+.location .icon {
+  color: black;
+}
+
+/****** HEADER - RESERVATION SECTION ***********/
+.reservation {
+  background-color: #F6F6F6;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.reservation .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+.reservation p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/****** Les images ***********/
+/* toutes les images(element) ne depasse le cadre pas leur section(block) */
+section img {
+  width: 100%;
+}
+
+/****** Les titres ***********/
+.primary-title {
+  font-family: "Shrikhand", "cursive";
+}
+
+.secondary-title {
+  font-family: "Roboto", "sans-serif";
+}
+
+/* tous possedent tous la meme police Shrikhand */
+.primary-title, h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+/* sauf les h3 */
+.secondary-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+/****** Les boutons ***********/
+/* tous sont en gras */
+button {
+  color: #FFFFFF;
+  border: none;
+  width: 70%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 30px;
+  font-size: 16px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+/****** HEADER ***********/
+/* tous les elements sont centrés */
+/* header (media queries) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} */
+/****** MAIN ***********/
+.main-content {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/****** STEPS SECTION ***********/
+.steps__section {
+  background-color: #FFFFFF;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.steps__title {
+  margin-top: 15px;
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list__item {
+  height: 72px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.item__description {
+  font-weight: bold;
+}
+
+/****** RESTAURANTS SECTION ***********/
+.restaurants__section {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.restaurants__title {
+  margin-top: 15px;
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  gap: 20px;
+}
+
+.cards_information {
+  padding: 15px;
+}
+
+.cards__image {
+  height: 231px;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.cards__title {
+  font-size: 18px;
+}
+
+.cards__text {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.footer__section {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+
+.footer__title {
+  font-size: 18px;
+  padding: 15px 15px 0px 15px;
+  font-weight: normal;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.footer__list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+footer .title {
+  font-family: "Shrikhand", "cursive";
+}/*# sourceMappingURL=body.css.map */
