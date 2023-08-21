@@ -5,6 +5,13 @@ $white : #FFFFFF;
 $medium-grey : #EAEAEA;
 $light-grey : #F6F6F6;
 $grey : #7E7E7E;
+%purple-gradient {
+    background: linear-gradient(#FF79DA, #9356DC);
+}
+
+%shadow {
+    box-shadow: 1px 4px 6px 0px #b6b5b5;
+}
 
 
 @mixin flex($direction:row,$align:center,$justify:center,$gap:15px){
@@ -21,19 +28,27 @@ $grey : #7E7E7E;
     font-weight: $weight;
 }
 
-@mixin gaps($margin:0px,$padding:0px,$gap:0px){
+@mixin margins($margin:0px,$padding:0px){
     margin: $margin;
     padding: $padding;
-    gap: $gap;
 }
+
+@mixin button($width:70%,$height:50px,$border:none,$radius:25px){
+    cursor: pointer;
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $radius;
+}
+
 
 * {
     /* Polices */
     font-family: $font-text;
     font-size: 16px;
     /* Reset des marges internes et externes */
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     /* Suppression des puces des listes */
     list-style-type: none; 
 
@@ -89,8 +104,46 @@ nav {
     p {
         @include typo($font: $font-text,$size: 18px, $weight: lighter)
     }
+    .btn-purple {
+        @include button();
+        @extend %purple-gradient, %shadow;
+        @include margins($margin:30px);
+        color: $white;
+    }
 }
 
+/****** MAIN ***********/
+.main-content {
+    background-color: $light-grey;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:50px);
+ }
+ 
+ /****** MAIN - STEPS SECTION ***********/
+ .steps {
+    background-color: $white;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:15px);
+    padding: 18px;
+    .title {
+        @include typo($font:$font-text, $size: 24px, $weight: bold);
+        margin-top: 15px;
+    }
+ }
+ 
+ .steps-list {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+        .steps-card {
+            background-color: #F6F6F6;
+            @include flex($gap:20px);
+            height: 72px;
+            border-radius: 25px;
+                p {
+                    font-weight: bold;
+                }
+        }
+ }
+ 
+
+ 
 
 /****** Les images ***********/
 /* toutes les images(element) ne depasse le cadre pas leur section(block) */
@@ -120,17 +173,17 @@ section img {
 
 /****** Les boutons ***********/
 /* tous sont en gras */
-button {
-    color: #FFFFFF;
-    border: none;
-    width: 70%;
-    height: 50px;
-    border-radius: 25px;
-    margin: 30px;
-    font-size: 16px;
-    background: linear-gradient(#FF79DA,#9356DC);
+// button {
+//     color: #FFFFFF;
+//     border: none;
+//     width: 70%;
+//     height: 50px;
+//     border-radius: 25px;
+//     margin: 30px;
+//     font-size: 16px;
+//     background: linear-gradient(#FF79DA,#9356DC);
 
-}
+// }
 
 /****** HEADER ***********/
 /* tous les elements sont centrés */
@@ -142,47 +195,6 @@ button {
 
 
 
-/****** MAIN ***********/
-.main-content {
-   background-color: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-/****** STEPS SECTION ***********/
-.steps__section {
-    background-color: #FFFFFF;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.steps__title {
-    margin-top: 15px;
-}
-
-.steps__list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.list__item {
-    height: 72px;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-      
-}
-
-.item__description {
-    font-weight: bold;
-}
 
 
 

@@ -1,12 +1,20 @@
 @charset "UTF-8";
 /****** GLOBAL ***********/
+.reservation .btn-purple {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+.reservation .btn-purple {
+  box-shadow: 1px 4px 6px 0px #b6b5b5;
+}
+
 * {
   /* Polices */
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
   /* Reset des marges internes et externes */
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   /* Suppression des puces des listes */
   list-style-type: none;
   /* Images */
@@ -77,6 +85,64 @@ nav .title {
   font-size: 18px;
   font-weight: lighter;
 }
+.reservation .btn-purple {
+  cursor: pointer;
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  margin: 30px;
+  padding: 0px;
+  color: #FFFFFF;
+}
+
+/****** MAIN ***********/
+.main-content {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 50px;
+}
+
+/****** MAIN - STEPS SECTION ***********/
+.steps {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 15px;
+  padding: 18px;
+}
+.steps .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+}
+.steps-list .steps-card {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 72px;
+  border-radius: 25px;
+}
+.steps-list .steps-card p {
+  font-weight: bold;
+}
 
 /****** Les images ***********/
 /* toutes les images(element) ne depasse le cadre pas leur section(block) */
@@ -106,17 +172,6 @@ section img {
 
 /****** Les boutons ***********/
 /* tous sont en gras */
-button {
-  color: #FFFFFF;
-  border: none;
-  width: 70%;
-  height: 50px;
-  border-radius: 25px;
-  margin: 30px;
-  font-size: 16px;
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-
 /****** HEADER ***********/
 /* tous les elements sont centrés */
 /* header (media queries) {
@@ -124,47 +179,6 @@ button {
     flex-direction: column;
     gap: 15px;
 } */
-/****** MAIN ***********/
-.main-content {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-/****** STEPS SECTION ***********/
-.steps__section {
-  background-color: #FFFFFF;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.steps__title {
-  margin-top: 15px;
-}
-
-.steps__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.list__item {
-  height: 72px;
-  background-color: #F6F6F6;
-  border-radius: 25px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.item__description {
-  font-weight: bold;
-}
-
 /****** RESTAURANTS SECTION ***********/
 .restaurants__section {
   padding: 18px;
