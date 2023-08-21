@@ -171,19 +171,45 @@ nav {
         @include typo($font: $font-text, $size: 24px, $weight: bold);
         margin-top: 15px;
     }
-    .restaurants-cards {
-        @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
-        .cards {
-            background-color: $white;
-            border-radius: 25px;
-            gap: 20px;
-        }
-    } 
 }
 
+.restaurants-cards {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+    position: relative;
+    .label {
+        @include flex();
+        @include button($width:80px,$height:29px,$border:none,$radius:2px);
+        cursor: auto;
+        background-color: #99E2D0;
+        .label-text {
+            font-size: 14px;
+            color: #008766;
+        }
+    }
+    .label-flexbox {
+        position: absolute;
+        top: 15px; right: 20px;
+        &02 {
+            position: absolute;
+            top: 340px; right: 20px;
+        }
+        &03 {
+            position: absolute;
+            top: 670px; right: 20px;
+        }
+        &04 {
+            position: absolute;
+            top: 1000px; right: 20px;
+        }
+    }
+}
+    
 
-
-
+    .cards {
+        background-color: $white;
+        border-radius: 25px;
+        gap: 20px;
+    }
 
 
 .cards_information {
