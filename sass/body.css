@@ -179,15 +179,58 @@ nav .title {
   gap: 15px;
   padding: 18px;
 }
-
-.restaurants__title {
+.restaurants .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
   margin-top: 15px;
 }
 
-.restaurants__cards {
+.restaurants-cards {
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
   gap: 20px;
+  position: relative;
+}
+.restaurants-cards .label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  width: 80px;
+  height: 29px;
+  border: none;
+  border-radius: 2px;
+  cursor: auto;
+  background-color: #99E2D0;
+}
+.restaurants-cards .label .label-text {
+  font-size: 14px;
+  color: #008766;
+}
+.restaurants-cards .label-flexbox {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.restaurants-cards .label-flexbox02 {
+  position: absolute;
+  top: 340px;
+  right: 20px;
+}
+.restaurants-cards .label-flexbox03 {
+  position: absolute;
+  top: 670px;
+  right: 20px;
+}
+.restaurants-cards .label-flexbox04 {
+  position: absolute;
+  top: 1000px;
+  right: 20px;
 }
 
 .cards {
