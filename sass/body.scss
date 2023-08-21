@@ -5,6 +5,7 @@ $white : #FFFFFF;
 $medium-grey : #EAEAEA;
 $light-grey : #F6F6F6;
 $grey : #7E7E7E;
+$purple : #9356DC;
 %purple-gradient {
     background: linear-gradient(#FF79DA, #9356DC);
 }
@@ -92,8 +93,6 @@ nav {
     }
 }
 
-
-/****** HEADER - RESERVATION SECTION ***********/
 .reservation {
     background-color: $light-grey;
     padding: 30px;
@@ -116,10 +115,10 @@ nav {
 .main-content {
     background-color: $light-grey;
     @include flex($direction:column,$align:normal,$justify:normal,$gap:50px);
- }
+}
  
  /****** MAIN - STEPS SECTION ***********/
- .steps {
+.steps {
     background-color: $white;
     @include flex($direction:column,$align:normal,$justify:normal,$gap:15px);
     padding: 18px;
@@ -127,22 +126,103 @@ nav {
         @include typo($font:$font-text, $size: 24px, $weight: bold);
         margin-top: 15px;
     }
- }
+}
  
- .steps-list {
+.steps-list {
     @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+        .dot {
+            @include flex();
+            @include button($width:24px,$height:24px,$border:none,$radius:50%);
+            cursor: auto;
+            background-color: $purple;
+            position: relative;
+            top: 70px; left: -10px;
+            .icon-number {
+                            font-size: 10px;
+                            color: $white;
+                        }
+        }
         .steps-card {
             background-color: #F6F6F6;
             @include flex($gap:20px);
+            @extend %shadow;
             height: 72px;
             border-radius: 25px;
                 p {
                     font-weight: bold;
                 }
+                
         }
- }
- 
+}
 
+
+
+// .dot {
+//     @include flex();
+//     @include button($width:24px,$height:24px,$border:none,$radius:50%);
+//     cursor: auto;
+//     background-color: #9356DC;
+// }
+//     .icon-number {
+//         font-size: 10px;
+//         color: $white;
+//     }
+
+
+// .dot {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 24px;
+//     width: 24px;
+//     border-radius: 50%;
+//     border: 1px solid #d3d3d3;
+//     font-size: 12px;
+// }
+ 
+/****** MAIN - RESTAURANTS SECTION ***********/
+.restaurants {
+    @include flex($direction:column,$align:normal);
+
+    padding: 18px;
+    
+    
+}
+
+.restaurants__title {
+    margin-top: 15px;
+}
+
+.restaurants__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    gap: 20px;
+
+}
+
+.cards_information {
+    padding: 15px;
+}
+
+.cards__image {
+    height: 231px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.cards__title {
+    font-size: 18px;
+}
+
+.cards__text {
+    font-size: 17px;
+    font-weight: lighter;
+}
  
 
 /****** Les images ***********/
@@ -198,49 +278,7 @@ section img {
 
 
 
-/****** RESTAURANTS SECTION ***********/
-.restaurants__section {
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
-}
 
-.restaurants__title {
-    margin-top: 15px;
-}
-
-.restaurants__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.cards {
-    background-color: #FFFFFF;
-    border-radius: 25px;
-    gap: 20px;
-
-}
-
-.cards_information {
-    padding: 15px;
-}
-
-.cards__image {
-    height: 231px;
-    border-radius: 25px 25px 0px 0px;
-}
-
-.cards__title {
-    font-size: 18px;
-}
-
-.cards__text {
-    font-size: 17px;
-    font-weight: lighter;
-}
 
 
 

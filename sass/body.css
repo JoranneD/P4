@@ -4,7 +4,7 @@
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
-.reservation .btn-purple {
+.steps-list .steps-card, .reservation .btn-purple {
   box-shadow: 1px 4px 6px 0px #b6b5b5;
 }
 
@@ -65,7 +65,6 @@ nav .title {
   color: black;
 }
 
-/****** HEADER - RESERVATION SECTION ***********/
 .reservation {
   background-color: #F6F6F6;
   padding: 30px;
@@ -130,6 +129,27 @@ nav .title {
   justify-content: normal;
   gap: 20px;
 }
+.steps-list .dot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  cursor: auto;
+  background-color: #9356DC;
+  position: relative;
+  top: 70px;
+  left: -10px;
+}
+.steps-list .dot .icon-number {
+  font-size: 10px;
+  color: #FFFFFF;
+}
 .steps-list .steps-card {
   background-color: #F6F6F6;
   display: flex;
@@ -142,6 +162,50 @@ nav .title {
 }
 .steps-list .steps-card p {
   font-weight: bold;
+}
+
+/****** MAIN - RESTAURANTS SECTION ***********/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  gap: 15px;
+  padding: 18px;
+}
+
+.restaurants__title {
+  margin-top: 15px;
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  gap: 20px;
+}
+
+.cards_information {
+  padding: 15px;
+}
+
+.cards__image {
+  height: 231px;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.cards__title {
+  font-size: 18px;
+}
+
+.cards__text {
+  font-size: 17px;
+  font-weight: lighter;
 }
 
 /****** Les images ***********/
@@ -179,48 +243,6 @@ section img {
     flex-direction: column;
     gap: 15px;
 } */
-/****** RESTAURANTS SECTION ***********/
-.restaurants__section {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.restaurants__title {
-  margin-top: 15px;
-}
-
-.restaurants__cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cards {
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  gap: 20px;
-}
-
-.cards_information {
-  padding: 15px;
-}
-
-.cards__image {
-  height: 231px;
-  border-radius: 25px 25px 0px 0px;
-}
-
-.cards__title {
-  font-size: 18px;
-}
-
-.cards__text {
-  font-size: 17px;
-  font-weight: lighter;
-}
-
 .footer__section {
   background-color: #353535;
   color: #FFFFFF;
