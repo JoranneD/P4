@@ -1,0 +1,124 @@
+/****** UTILS ***********/
+@use 'utils/index';
+
+/****** COMPONENTS ***********/
+@use 'components/header';
+@use 'components/nav';
+@use 'components/footer';
+
+
+/****** MAIN ***********/
+.main-content {
+    background-color: $light-grey;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:50px);
+}
+ 
+ /****** MAIN - STEPS SECTION ***********/
+.steps {
+    background-color: $white;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:15px);
+    padding: 18px;
+    .title {
+        @include typo($font:$font-text, $size: 24px, $weight: bold);
+        margin-top: 15px;
+    }
+}
+
+.steps-list {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:0px);
+    margin-bottom: 50px;
+    .dot {
+        @include flex();
+        @include button($width:24px,$height:24px,$border:none,$radius:50%);
+        cursor: auto;
+        background-color: $purple;
+        .icon-number {
+            font-size: 10px;
+            color: $white;
+        }
+    }
+    .dot-flexbox {
+        position: relative;
+        top: 50px; left: -10px;
+    }
+    .steps-card {
+        background-color: #F6F6F6;
+        @include flex($gap:25px);
+        @extend %shadow;
+        height: 72px;
+        border-radius: 25px;
+        .icon {
+            color: $grey;
+            font-size: 20px;
+            &:hover {
+                color: $purple;
+            }
+        }
+        p {
+            font-weight: bold;
+        }      
+    }
+}
+
+
+/****** MAIN - RESTAURANTS SECTION ***********/
+.restaurants {
+    @include flex($direction:column,$align:normal);
+    padding: 18px;
+    .title {
+        @include typo($font: $font-text, $size: 24px, $weight: bold);
+        margin-top: 15px;
+    }
+}
+
+.restaurants-cards {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+    position: relative;
+    margin-bottom: 50px;
+    .label {
+        @include flex();
+        @include button($width:80px,$height:29px,$border:none,$radius:2px);
+        cursor: auto;
+        background-color: #99E2D0;
+        .label-text {
+            font-size: 14px;
+            color: #008766;
+        }
+    }
+    .label-flexbox {
+        position: absolute;
+        top: 15px; right: 20px;
+        &02 {
+            position: absolute;
+            top: 340px; right: 20px;
+        }
+        &03 {
+            position: absolute;
+            top: 670px; right: 20px;
+        }
+        &04 {
+            position: absolute;
+            top: 1000px; right: 20px;
+        }
+    }
+}
+
+.cards {
+    background-color: $white;
+    border-radius: 25px;
+    gap: 20px;
+    .cards-image {
+    height: 231px;
+    border-radius: 25px 25px 0px 0px;
+    }
+    .cards-information {
+    padding: 15px;
+        .cards-title {
+        font-size: 18px;
+        }
+        .cards-text {
+        font-size: 17px;
+        font-weight: lighter;
+        }
+    }
+}

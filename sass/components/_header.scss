@@ -1,0 +1,33 @@
+/****** HEADER ***********/
+header *  {
+    text-align: center;
+}
+
+@use 'components/nav';
+
+.location {
+    background-color: $medium-grey;
+    padding: 15px;
+    @include flex($gap:17px); /* j'ai uniquement mis le parametre à modifier)*/
+    .icon {
+        color: black;
+    }
+}
+
+.reservation {
+    background-color: $light-grey;
+    padding: 30px;
+    @include flex($direction: column, $align: center, $justify: center, $gap:10px);
+    .title {
+        @include typo($font: $font-text,$size: 24px, $weight: bold)
+    }
+    p {
+        @include typo($font: $font-text,$size: 18px, $weight: lighter)
+    }
+    .btn-purple {
+        @include button();
+        @extend %purple-gradient, %shadow;
+        @include margins($margin:30px);
+        color: $white;
+    }
+}

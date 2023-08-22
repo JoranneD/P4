@@ -1,0 +1,8 @@
+$white : #FFFFFF;
+$light-grey : #F6F6F6;
+$medium-grey : #EAEAEA;
+$grey : #7E7E7E;
+$purple : #9356DC;
+%purple-gradient {
+    background: linear-gradient(#FF79DA, #9356DC);
+}
