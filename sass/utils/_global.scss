@@ -1,0 +1,29 @@
+@use 'utils/index';
+
+/****** SHADOWS ***********/
+%shadow {
+    box-shadow: 1px 4px 6px 0px #b6b5b5;
+}
+
+* {
+    font-family: $font-text;
+    font-size: 16px;
+    object-fit: cover;
+}
+
+
+/****** BODY ***********/
+.main-container {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    background-color: #D2D2D2;
+
+    section img {
+        width: 100%;
+    }
+}
+
+
+

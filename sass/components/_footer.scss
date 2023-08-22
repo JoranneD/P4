@@ -1,0 +1,23 @@
+/****** FOOTER ***********/
+.footer {
+    background-color: #353535;
+    color: $white;
+    .title {
+        @include typo($size: 18px);
+        padding: 15px 15px 0px 15px;
+    }
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    .footer-links a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: $white;
+    text-decoration: none;
+    }
+}
