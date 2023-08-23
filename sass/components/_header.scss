@@ -3,7 +3,17 @@ header *  {
     text-align: center;
 }
 
-@use 'components/nav';
+nav {
+    background-color: $white;
+    padding: 15px;
+    .title {
+        @include typo($size:30px); /* j'ai uniquement mis le parametre à modifier)*/
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
 
 .location {
     background-color: $medium-grey;

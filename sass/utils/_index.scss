@@ -1,5 +1,11 @@
-@use 'utils/reset';
-@use 'utils/global';
-@use 'utils/colors';
-@use 'utils/fonts';
-@use 'utils/mixin';
+@forward 'utils/reset';
+@forward 'utils/global';
+@forward 'utils/colors';
+@forward 'utils/fonts';
+@forward 'utils/mixin';
+
+// @use 'utils/reset';
+// @use 'utils/global';
+// @use 'utils/colors';
+// @use 'utils/fonts';
+// @use 'utils/mixin';

@@ -3,7 +3,6 @@
 
 /****** COMPONENTS ***********/
 @use 'components/header';
-@use 'components/nav';
 @use 'components/footer';
 
 
@@ -41,23 +40,23 @@
         position: relative;
         top: 50px; left: -10px;
     }
-    .steps-card {
-        background-color: #F6F6F6;
-        @include flex($gap:25px);
-        @extend %shadow;
-        height: 72px;
-        border-radius: 25px;
-        .icon {
-            color: $grey;
-            font-size: 20px;
-            &:hover {
-                color: $purple;
-            }
-        }
-        p {
-            font-weight: bold;
-        }      
-    }
+    // .steps-card {
+    //     background-color: #F6F6F6;
+    //     @include flex($gap:25px);
+    //     @extend %shadow;
+    //     height: 72px;
+    //     border-radius: 25px;
+    //     .icon {
+    //         color: $grey;
+    //         font-size: 20px;
+    //         &:hover {
+    //             color: $purple;
+    //         }
+    //     }
+    //     p {
+    //         font-weight: bold;
+    //     }      
+    // }
 }
 
 
@@ -103,22 +102,22 @@
     }
 }
 
-.cards {
-    background-color: $white;
-    border-radius: 25px;
-    gap: 20px;
-    .cards-image {
-    height: 231px;
-    border-radius: 25px 25px 0px 0px;
-    }
-    .cards-information {
-    padding: 15px;
-        .cards-title {
-        font-size: 18px;
-        }
-        .cards-text {
-        font-size: 17px;
-        font-weight: lighter;
-        }
-    }
-}
+// .cards {
+//     background-color: $white;
+//     border-radius: 25px;
+//     gap: 20px;
+//     .cards-image {
+//     height: 231px;
+//     border-radius: 25px 25px 0px 0px;
+//     }
+//     .cards-information {
+//     padding: 15px;
+//         .cards-title {
+//         font-size: 18px;
+//         }
+//         .cards-text {
+//         font-size: 17px;
+//         font-weight: lighter;
+//         }
+//     }
+// }
