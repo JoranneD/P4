@@ -7,7 +7,7 @@ nav {
     background-color: $white;
     padding: 15px;
     .title {
-        @include typo($size:30px); /* j'ai uniquement mis le parametre à modifier)*/
+        @include typo($size:30px);
     }
     a {
         text-decoration: none;
@@ -18,7 +18,7 @@ nav {
 .location {
     background-color: $medium-grey;
     padding: 15px;
-    @include flex($gap:17px); /* j'ai uniquement mis le parametre à modifier)*/
+    @include flex($gap:17px);
     .icon {
         color: black;
     }
@@ -36,7 +36,7 @@ nav {
     }
     .btn-purple {
         @include button();
-        @extend %purple-gradient, %shadow;
+        @extend .purple-gradient, .shadow;
         @include margins($margin:30px);
         color: $white;
     }

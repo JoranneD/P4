@@ -1,14 +1,15 @@
 .steps-card {
-    background-color: #F6F6F6;
+    position: relative;
+    background-color: $light-grey;
     @include flex($gap:25px);
-    @extend %shadow;
+    @extend .shadow;
     height: 72px;
     border-radius: 25px;
     .icon {
         color: $grey;
         font-size: 20px;
         &:hover {
-            color: $purple;
+            color: $round-background;
         }
     }
     p {
@@ -17,6 +18,7 @@
 }
 
 .cards {
+    position: relative;
     background-color: $white;
     border-radius: 25px;
     gap: 20px;

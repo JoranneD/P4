@@ -1,11 +1,11 @@
-@use 'utils/index';
+@import './fonts';
 
 /****** SHADOWS ***********/
-%shadow {
+.shadow {
     box-shadow: 1px 4px 6px 0px #b6b5b5;
 }
 
-* {
+body * {
     font-family: $font-text;
     font-size: 16px;
     object-fit: cover;

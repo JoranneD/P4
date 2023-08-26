@@ -2,7 +2,13 @@ $white : #FFFFFF;
 $light-grey : #F6F6F6;
 $medium-grey : #EAEAEA;
 $grey : #7E7E7E;
-$purple : #9356DC;
-%purple-gradient {
+
+/****** Button ***********/
+.purple-gradient {
     background: linear-gradient(#FF79DA, #9356DC);
 }
+
+/****** Labels ***********/
+$round-background:#9356DC;
+$square-background:#99E2D0;
+$square-text:#008766;
