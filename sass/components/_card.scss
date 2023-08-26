@@ -1,0 +1,39 @@
+.steps-card {
+    position: relative;
+    background-color: $light-grey;
+    @include flex($gap:25px);
+    @extend .shadow;
+    height: 72px;
+    border-radius: 25px;
+    .icon {
+        color: $grey;
+        font-size: 20px;
+        &:hover {
+            color: $round-background;
+        }
+    }
+    p {
+        font-weight: bold;
+    }      
+}
+
+.cards {
+    position: relative;
+    background-color: $white;
+    border-radius: 25px;
+    gap: 20px;
+    .cards-image {
+    height: 231px;
+    border-radius: 25px 25px 0px 0px;
+    }
+    .cards-information {
+    padding: 15px;
+        .cards-title {
+        font-size: 18px;
+        }
+        .cards-text {
+        font-size: 17px;
+        font-weight: lighter;
+        }
+    }
+}

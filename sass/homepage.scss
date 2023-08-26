@@ -1,10 +1,10 @@
 /****** UTILS ***********/
-@use 'utils/index';
+@import '../sass/utils/index';
 
 /****** COMPONENTS ***********/
-@use 'components/header';
-@use 'components/nav';
-@use 'components/footer';
+@import '../sass/components/header';
+@import '../sass/components/card';
+@import '../sass/components/footer';
 
 
 /****** MAIN ***********/
@@ -25,38 +25,18 @@
 }
 
 .steps-list {
-    @include flex($direction:column,$align:normal,$justify:normal,$gap:0px);
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:25px);
     margin-bottom: 50px;
     .dot {
         @include flex();
         @include button($width:24px,$height:24px,$border:none,$radius:50%);
+        @include position($top:25px,$left:-10px);
         cursor: auto;
-        background-color: $purple;
+        background-color: $round-background;
         .icon-number {
             font-size: 10px;
             color: $white;
         }
-    }
-    .dot-flexbox {
-        position: relative;
-        top: 50px; left: -10px;
-    }
-    .steps-card {
-        background-color: #F6F6F6;
-        @include flex($gap:25px);
-        @extend %shadow;
-        height: 72px;
-        border-radius: 25px;
-        .icon {
-            color: $grey;
-            font-size: 20px;
-            &:hover {
-                color: $purple;
-            }
-        }
-        p {
-            font-weight: bold;
-        }      
     }
 }
 
@@ -73,52 +53,16 @@
 
 .restaurants-cards {
     @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
-    position: relative;
     margin-bottom: 50px;
     .label {
         @include flex();
         @include button($width:80px,$height:29px,$border:none,$radius:2px);
+        @include position($top:15px,$right:20px);
         cursor: auto;
         background-color: #99E2D0;
         .label-text {
             font-size: 14px;
-            color: #008766;
-        }
-    }
-    .label-flexbox {
-        position: absolute;
-        top: 15px; right: 20px;
-        &02 {
-            position: absolute;
-            top: 340px; right: 20px;
-        }
-        &03 {
-            position: absolute;
-            top: 670px; right: 20px;
-        }
-        &04 {
-            position: absolute;
-            top: 1000px; right: 20px;
-        }
-    }
-}
-
-.cards {
-    background-color: $white;
-    border-radius: 25px;
-    gap: 20px;
-    .cards-image {
-    height: 231px;
-    border-radius: 25px 25px 0px 0px;
-    }
-    .cards-information {
-    padding: 15px;
-        .cards-title {
-        font-size: 18px;
-        }
-        .cards-text {
-        font-size: 17px;
-        font-weight: lighter;
+            color: $square-text;
         }
     }
 }

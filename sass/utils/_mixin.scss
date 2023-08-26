@@ -17,11 +17,12 @@
     padding: $padding;
 }
 
-@mixin position($top:0px,$left:0px,$right){
-    position: relative;
+@mixin position($top:none,$left:none,$right:none,$bottom:none){
+    position: absolute;
     top: $top;
     left: $left;
     right: $right;
+    bottom: $bottom;
 }
 
 @mixin button($width:70%,$height:50px,$border:none,$radius:25px){
