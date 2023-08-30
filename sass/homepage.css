@@ -36,6 +36,11 @@ body * {
 }
 
 /****** Labels ***********/
+/* TEST */
+.orange {
+  background-color: orange;
+}
+
 /****** FONTS ***********/
 /****** COMPONENTS ***********/
 /****** HEADER ***********/
@@ -98,6 +103,12 @@ nav a {
   margin: 30px;
   padding: 0px;
   color: #FFFFFF;
+  /* TEST */
+  transition: transform 450ms, background-color 300ms 150ms;
+}
+.reservation .btn-purple:hover {
+  transform: scale(1.13);
+  background: orangered;
 }
 
 .steps-card {
@@ -134,6 +145,12 @@ nav a {
 }
 .cards .cards-information {
   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: none;
+  justify-content: center;
+  gap: 15px;
+  justify-content: space-between;
 }
 .cards .cards-information .cards-title {
   font-size: 18px;
@@ -141,6 +158,42 @@ nav a {
 .cards .cards-information .cards-text {
   font-size: 17px;
   font-weight: lighter;
+}
+.cards .cards-information .heart-button {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  gap: normal;
+  margin-right: 24px;
+}
+.cards .cards-information .heart-button i {
+  font-size: 22px;
+  transition: transform 450ms 150ms;
+}
+.cards .cards-information .heart-button i:hover, .cards .cards-information .heart-button i:focus {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+@keyframes like {
+  75% {
+    transform: scale(1.25);
+  }
+}
+@keyframes dislike {
+  75% {
+    transform: scale(0.75);
+  }
+}
+.cards .cards-information label i {
+  animation: dislike 0.5s ease 0s;
+}
+.cards .cards-information input:checked + label i {
+  animation: like 0.5s ease 0s;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.cards .cards-information #liked {
+  width: 0px;
+  height: 0px;
 }
 
 /****** FOOTER ***********/
