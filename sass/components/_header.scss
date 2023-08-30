@@ -39,5 +39,15 @@ nav {
         @extend .purple-gradient, .shadow;
         @include margins($margin:30px);
         color: $white;
+        /* TEST */
+        transition: transform 450ms, background-color 300ms 150ms;
+        &:hover {
+            transform: scale(1.13);
+            background: orangered;
+
+          
+
+        }
     }
 }
+
