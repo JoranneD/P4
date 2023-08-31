@@ -159,41 +159,35 @@ nav a {
   font-size: 17px;
   font-weight: lighter;
 }
-.cards .cards-information .heart-button {
+
+.heart {
   display: flex;
   flex-direction: column;
   align-items: normal;
   justify-content: center;
   gap: normal;
   margin-right: 24px;
+  border: none;
+  background: none;
 }
-.cards .cards-information .heart-button i {
+.heart i {
   font-size: 22px;
   transition: transform 450ms 150ms;
 }
-.cards .cards-information .heart-button i:hover, .cards .cards-information .heart-button i:focus {
-  background: linear-gradient(#FF79DA, #9356DC);
+.heart i:hover + empty {
+  opacity: 0;
 }
-@keyframes like {
-  75% {
-    transform: scale(1.25);
-  }
+.heart i:hover + full {
+  opacity: 1;
 }
-@keyframes dislike {
-  75% {
-    transform: scale(0.75);
-  }
+
+.empty:hover {
+  opacity: 1;
+  color: purple;
 }
-.cards .cards-information label i {
-  animation: dislike 0.5s ease 0s;
-}
-.cards .cards-information input:checked + label i {
-  animation: like 0.5s ease 0s;
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-.cards .cards-information #liked {
-  width: 0px;
-  height: 0px;
+
+.full {
+  opacity: 0;
 }
 
 /****** FOOTER ***********/
