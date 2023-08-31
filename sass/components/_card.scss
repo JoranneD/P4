@@ -37,42 +37,59 @@
         font-size: 17px;
         font-weight: lighter;
         }
-        .heart-button {
-        @include flex($direction:column,$align:normal,$justify:center,$gap:normal);
-        margin-right: 24px;
-            i {
-                font-size: 22px;
-                transition: transform 450ms 150ms;
-                &:hover, &:focus {
-                    background: linear-gradient(#FF79DA, #9356DC);
-                }
-            }
-        }
-
-
-
-        @keyframes like {
-            75% {
-                transform: scale(1.25);
-            }
-        }
-        @keyframes dislike {
-            75% {
-                transform: scale(0.75);
-            }
-        }
-
-        label i {
-            animation: dislike 0.5s ease 0s;
-        }
-        input:checked + label i {
-            animation:like 0.5s ease 0s;
-            background: linear-gradient(#FF79DA, #9356DC);
-            
-        }
-        #liked {
-            width: 0px;
-            height: 0px;
-        }
     }
 }
+
+.heart {
+    @include flex($direction:column,$align:normal,$justify:center,$gap:normal);
+    margin-right: 24px;
+    border: none;
+    background: none;
+        i {
+            font-size: 22px;
+            transition: transform 450ms 150ms;
+            &:hover + empty {
+        opacity: 0;
+    }
+    &:hover + full {
+        opacity: 1;
+    }
+        }
+    
+}
+
+.empty {
+    &:hover {
+        opacity: 1;
+        color: purple;
+    }
+
+}
+.full {
+    opacity: 0;
+}
+
+
+    //  transition: transform 450ms 150ms;@keyframes like {
+    //     75% {
+    //         transform: scale(1.25);
+    //     }
+    // }
+    // @keyframes dislike {
+    //     75% {
+    //         transform: scale(0.75);
+    //     }
+    // }
+
+    // label i {
+    //     animation: dislike 0.5s ease 0s;
+    // }
+    // input:checked + label i {
+    //     animation:like 0.5s ease 0s;
+    //     background: linear-gradient(#FF79DA, #9356DC);
+        
+    // }
+    // #liked {
+    //     width: 0px;
+    //     height: 0px;
+    // }
