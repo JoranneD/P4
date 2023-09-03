@@ -42,32 +42,48 @@
 
 .heart {
     @include flex($direction:column,$align:normal,$justify:center,$gap:normal);
-    margin-right: 24px;
-    border: none;
+    /* enlever le border et background-color du bouton */
+    border: none; 
     background: none;
-        i {
-            font-size: 22px;
-            transition: transform 450ms 150ms;
-            &:hover + empty {
+    /* superposer les icones. ici, c'est le point d'encrage */
+    position: relative;  
+    /* indiquer coordonnées de superposition à l'element absolute */
+    height: 24px; 
+    width: 24px;
+
+    i {
+        /* se superpose selon les coordonnées*/
+        position: absolute; 
+        font-size: 24px;
+        /* on veux que la transition opacity s'applique sur le i.*/
+        transition: opacity 1s ease-in-out; 
+    }
+    /* full, c'est l'icone rempli */
+    .full {
+        /* on ne veux pas le voir */
         opacity: 0;
+        /* mais en réalité il à cette couleur */
+        background: linear-gradient(#FF79DA, #9356DC);
+        /* on veux que notre couleur(background) prenne le meme espace que prend le texte(i) peu importe le navigateur */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
     }
-    &:hover + full {
-        opacity: 1;
-    }
-        }
-    
-}
-
-.empty {
+    /* au survol du bouton heart ...*/
     &:hover {
-        opacity: 1;
-        color: purple;
-    }
+        /* tout ce qu'il y a dans la classe empty n'est plus visible*/
+        .empty {
+            opacity: 0;
+        }
+        /*tout ce qu'il y a dans la classe full est visible*/
+        .full {
+            opacity: 1;
+        }
+    }  
+}
 
-}
-.full {
-    opacity: 0;
-}
+
 
 
     //  transition: transform 450ms 150ms;@keyframes like {
