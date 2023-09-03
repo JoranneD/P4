@@ -37,11 +37,6 @@ body * {
 }
 
 /****** Labels ***********/
-/* TEST */
-.orange {
-  background-color: orange;
-}
-
 /****** FONTS ***********/
 /****** COMPONENTS ***********/
 /****** HEADER ***********/
@@ -104,12 +99,20 @@ nav a {
   margin: 30px;
   padding: 0px;
   color: #FFFFFF;
-  /* TEST */
-  transition: transform 450ms, background-color 300ms 150ms;
+  /* button to link*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  /* transitions que je veux appliquer sur ce bouton/lien*/
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 .reservation .btn-purple:hover {
-  transform: scale(1.13);
-  background: orangered;
+  box-shadow: 1px 1px 20px 1px #c9c7c7;
+  opacity: 0.8;
+  scale: 1.003; /* 1.01 */
 }
 
 .steps-card {
