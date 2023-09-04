@@ -17,6 +17,16 @@
     }      
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+// a.card-link button {
+//     pointer-events: none;
+// }
+
+
 .cards {
     position: relative;
     background-color: $white;
@@ -51,6 +61,10 @@
     height: 24px; 
     width: 24px;
 
+    a {
+        pointer-events: none;
+    }
+
     i {
         /* se superpose selon les coordonnées*/
         position: absolute; 
@@ -82,6 +96,7 @@
         }
     }  
 }
+
 
 /****** UTILS ***********/
 

@@ -137,6 +137,11 @@ nav a {
   font-weight: bold;
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cards {
   position: relative;
   background-color: #FFFFFF;
@@ -180,6 +185,9 @@ nav a {
   width: 24px;
   /* full, c'est l'icone rempli */
   /* au survol du bouton heart ...*/
+}
+.heart a {
+  pointer-events: none;
 }
 .heart i {
   /* se superpose selon les coordonnées*/
