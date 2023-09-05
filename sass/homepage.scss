@@ -22,6 +22,18 @@
         @include typo($font:$font-text, $size: 24px, $weight: bold);
         margin-top: 15px;
     }
+
+    @media (min-width: $tablet) {
+        padding-left: 90px;
+        padding-right: 90px;
+        gap: 25px;
+    }
+
+    @media (min-width: $desktop) {
+        padding-left: 180px;
+        padding-right: 180px;
+        gap: 25px;
+    }
 }
 
 .steps-list {
@@ -38,6 +50,11 @@
             color: $white;
         }
     }
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 
@@ -48,6 +65,18 @@
     .title {
         @include typo($font: $font-text, $size: 24px, $weight: bold);
         margin-top: 15px;
+    }
+
+    @media (min-width: $tablet) {
+        padding-left: 90px;
+        padding-right: 90px;
+        gap: 14px;
+    }
+
+    @media (min-width: $desktop) {
+        padding-left: 180px;
+        padding-right: 180px;
+        gap: 28px;
     }
 }
 
@@ -64,6 +93,13 @@
             font-size: 14px;
             color: $square-text;
         }
+    }
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 25px; /* 50 pour le desktop*/
     }
 }
 

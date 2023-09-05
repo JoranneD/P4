@@ -21,7 +21,6 @@ body * {
 
 /****** BODY ***********/
 .main-container {
-  min-width: 375px;
   max-width: 1440px;
   margin: auto;
   gap: 30px;
@@ -136,6 +135,19 @@ nav a {
 .steps-card p {
   font-weight: bold;
 }
+@media (min-width: 768px) {
+  .steps-card {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .steps-card {
+    width: 30%;
+  }
+}
 
 .card-link {
   text-decoration: none;
@@ -147,6 +159,11 @@ nav a {
   background-color: #FFFFFF;
   border-radius: 25px;
   gap: 20px;
+}
+@media (min-width: 768px) {
+  .cards {
+    width: 45%;
+  }
 }
 .cards .cards-image {
   height: 231px;
@@ -179,8 +196,11 @@ nav a {
   border: none;
   background: none;
   /* superposer les icones. ici, c'est le point d'encrage */
-  position: relative;
+  position: absolute;
   /* indiquer coordonnées de superposition à l'element absolute */
+  top: 85%;
+  right: 5%;
+  /* dimensions du bouton*/
   height: 24px;
   width: 24px;
   /* full, c'est l'icone rempli */
