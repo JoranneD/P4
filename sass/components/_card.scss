@@ -14,7 +14,18 @@
     }
     p {
         font-weight: bold;
-    }      
+    } 
+    
+    @media (min-width: $tablet) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        width: 30%;
+    }
+
+    @media (min-width: $desktop) {
+        width: 30%;
+    }
 }
 
 .card-link {
@@ -32,6 +43,12 @@
     background-color: $white;
     border-radius: 25px;
     gap: 20px;
+
+    
+    @media (min-width: $tablet) {
+        width: 45%;
+    }
+
     .cards-image {
     height: 231px;
     border-radius: 25px 25px 0px 0px;
@@ -50,14 +67,18 @@
     }
 }
 
+
 .heart {
     @include flex($direction:column,$align:normal,$justify:center,$gap:normal);
     /* enlever le border et background-color du bouton */
     border: none; 
     background: none;
     /* superposer les icones. ici, c'est le point d'encrage */
-    position: relative;  
+    position: absolute;
     /* indiquer coordonnées de superposition à l'element absolute */
+    top: 85%;
+    right: 5%;
+    /* dimensions du bouton*/
     height: 24px; 
     width: 24px;
 
