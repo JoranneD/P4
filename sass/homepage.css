@@ -89,15 +89,21 @@ nav a {
   font-size: 18px;
   font-weight: lighter;
 }
+@media (min-width: 1024px) {
+  .reservation {
+    gap: 18px;
+  }
+}
 .reservation .btn-purple {
   cursor: pointer;
-  width: 70%;
+  width: none;
   height: 50px;
   border: none;
   border-radius: 25px;
   margin: 30px;
   padding: 0px;
   color: #FFFFFF;
+  padding: 0px 15px;
   /* button to link*/
   display: flex;
   flex-direction: row;
@@ -161,6 +167,11 @@ nav a {
   gap: 20px;
 }
 @media (min-width: 768px) {
+  .cards {
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
   .cards {
     width: 45%;
   }
@@ -250,6 +261,21 @@ nav a {
   font-weight: normal;
   padding: 15px 15px 0px 15px;
 }
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px 30px; /* 40px 30px*/
+    gap: 16px;
+  }
+}
 
 .footer-list {
   display: flex;
@@ -263,6 +289,45 @@ nav a {
   gap: 10px;
   color: #FFFFFF;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .footer-list {
+    flex-direction: row;
+    gap: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-list {
+    flex-direction: row;
+    gap: 35px;
+  }
+}
+
+.proposition-and-partnership, .information-and-contact {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .proposition-and-partnership, .information-and-contact {
+    display: flex;
+    gap: 7px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .proposition-and-partnership, .information-and-contact {
+    display: flex;
+    gap: 7px;
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-light {
+  font-weight: lighter;
 }
 
 /****** MAIN ***********/
@@ -410,6 +475,14 @@ nav a {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 25px; /* 50 pour le desktop*/
+    row-gap: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
   }
 }/*# sourceMappingURL=homepage.css.map */

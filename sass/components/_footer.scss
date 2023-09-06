@@ -6,6 +6,19 @@
         @include typo($size: 18px);
         padding: 15px 15px 0px 15px;
     }
+
+    @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 20px 15px;
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 25px 30px; /* 40px 30px*/
+        gap: 16px;
+    }
 }
 
 .footer-list {
@@ -20,4 +33,41 @@
     color: $white;
     text-decoration: none;
     }
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        gap: 35px;
+    }
+
+    @media (min-width: $desktop) {
+        flex-direction: row;
+        gap: 35px;
+    }
 }
+
+.proposition-and-partnership, .information-and-contact {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+        display: flex;
+        gap: 7px;
+        flex-direction: row;
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        gap: 7px;
+    }
+
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-light {
+    font-weight: lighter;
+}
+

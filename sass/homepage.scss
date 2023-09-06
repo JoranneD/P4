@@ -99,7 +99,14 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        row-gap: 25px; /* 50 pour le desktop*/
+        row-gap: 25px;
+    }
+
+    @media (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 50px;
     }
 }
 
