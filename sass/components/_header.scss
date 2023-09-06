@@ -34,11 +34,17 @@ nav {
     p {
         @include typo($font: $font-text,$size: 18px, $weight: lighter)
     }
+
+    @media (min-width: $desktop) {
+        gap: 18px;
+    }
+
     .btn-purple {
-        @include button();
+        @include button($width:none);
         @extend .purple-gradient, .shadow;
         @include margins($margin:30px);
         color: $white;
+        padding: 0px 15px;
         /* button to link*/
         @include flex();
         text-decoration: none;

@@ -33,10 +33,6 @@
     color: inherit;
 }
 
-// a.card-link button {
-//     pointer-events: none;
-// }
-
 
 .cards {
     position: relative;
@@ -46,6 +42,10 @@
 
     
     @media (min-width: $tablet) {
+        width: 45%;
+    }
+
+    @media (min-width: $desktop) {
         width: 45%;
     }
 
