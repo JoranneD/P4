@@ -1,4 +1,6 @@
 @import './fonts';
+@import './mixin';
+@import './colors';
 
 /****** SHADOWS ***********/
 .shadow {
@@ -11,14 +13,13 @@ body * {
     object-fit: cover;
 }
 
-
 /****** BODY ***********/
 .main-container {
-    max-width: 1440px;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:30px);
+    // max-width: 1440px; PU
     margin: auto;
-    gap: 30px;
-    background-color: #D2D2D2;
-
+    background-color: $light-grey; /* D2D2D2 */
+    
     section img {
         width: 100%;
     }
