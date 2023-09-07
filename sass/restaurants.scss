@@ -30,3 +30,81 @@
     }
 }
 
+
+.selection {
+    background-color: $light-grey;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    bottom: 50px;
+    padding: 20px 15px;
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:40px);
+
+    h2 {
+        @include typo();
+       
+    }
+
+    .heart {
+        top: 28px;
+        right: 28px;
+    }
+
+    .btn {
+        align-self: center;
+    }
+}
+
+.menu {
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:12px);
+    width: 100%;
+
+    .starter {
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:12px);
+    width: inherit;
+        h3 {
+            @include typo($font: $font-text, $size: 16px, $weight: lighter);
+            // width: inherit;
+            text-transform: uppercase;
+            // text-decoration: underline solid 5px #99E2D0;
+            border-bottom: solid 5px #99E2D0;
+            /*test*/
+            // transform: translateX(-10%);
+        }
+    }
+
+    .menu-cards {
+        @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+        width: inherit;
+
+        .cards {
+            @include flex($justify:space-between,$gap:5px);
+            background-color: $white;
+            border-radius: 15px;
+            padding: 15px;
+            @extend .shadow;
+
+            .name {
+                @include typo($font: $font-text, $size: 18px, $weight: normal);
+            }
+
+            .complement {
+                @include typo($font: $font-text, $size: 15px, $weight: light);
+            }
+
+            .price {
+                position: absolute;
+                top: 35px;
+                right: 20px;
+
+                p {
+                    @include typo($font: $font-text, $size: 15px, $weight: bold);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
