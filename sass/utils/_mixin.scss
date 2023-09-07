@@ -37,3 +37,9 @@
     text-decoration: $text-decoration;
     color: $color;
 }
+
+@mixin undertitle-deco($display: inline-block,$border: solid 5px #99E2D0,$padding: 10px) {
+    display: $display;
+    border-bottom: $border;
+    padding-bottom: $padding;
+}

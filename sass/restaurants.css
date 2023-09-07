@@ -14,7 +14,7 @@ body * {
 
 /****** Labels ***********/
 /****** SHADOWS ***********/
-.shadow, .steps-card, .btn-purple {
+.shadow, .menu .menu-cards .cards, .steps-card, .btn-purple {
   box-shadow: 1px 4px 6px 0px #b6b5b5;
 }
 
@@ -361,4 +361,92 @@ header * .location .icon {
 }
 .return i {
   font-size: 24px;
+}
+
+.selection {
+  background-color: #F6F6F6;
+  border-radius: 25px 25px 0px 0px;
+  position: relative;
+  bottom: 50px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 40px;
+}
+.selection h2 {
+  font-family: "Shrikhand", "cursive";
+  font-size: 28px;
+  font-weight: normal;
+}
+.selection .heart {
+  top: 28px;
+  right: 28px;
+}
+.selection .btn {
+  align-self: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 12px;
+  width: 100%;
+}
+.menu .starter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 12px;
+  width: inherit;
+}
+.menu .starter h3 {
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  border-bottom: solid 5px #99E2D0;
+  /*test*/
+}
+.menu .menu-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+  width: inherit;
+}
+.menu .menu-cards .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 15px;
+}
+.menu .menu-cards .cards .name {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: normal;
+}
+.menu .menu-cards .cards .complement {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: light;
+}
+.menu .menu-cards .cards .price {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+.menu .menu-cards .cards .price p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: bold;
 }/*# sourceMappingURL=restaurants.css.map */
