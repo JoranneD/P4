@@ -8,13 +8,13 @@ body * {
 
 /****** FONTS ***********/
 /****** Button ***********/
-.purple-gradient, .reservation .btn-purple {
+.purple-gradient, .btn-purple {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
 /****** Labels ***********/
 /****** SHADOWS ***********/
-.shadow, .steps-card, .reservation .btn-purple {
+.shadow, .steps-card, .btn-purple {
   box-shadow: 1px 4px 6px 0px #b6b5b5;
 }
 
@@ -40,7 +40,7 @@ body * {
 }
 
 /****** Button ***********/
-.purple-gradient, .reservation .btn-purple {
+.purple-gradient, .btn-purple {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
@@ -50,24 +50,22 @@ body * {
 /****** HEADER ***********/
 header * {
   text-align: center;
+  /****** NAVIGATION ET LOCATION SECTION ***********/
 }
-
-/****** NAVIGATION ET LOCATION SECTION ***********/
-nav {
+header * nav {
   background-color: #FFFFFF;
   padding: 15px;
 }
-nav .title {
+header * nav .title {
   font-family: "Shrikhand", "cursive";
   font-size: 30px;
   font-weight: normal;
 }
-nav a {
+header * nav a {
   text-decoration: none;
   color: black;
 }
-
-.location {
+header * .location {
   background-color: #EAEAEA;
   padding: 15px;
   display: flex;
@@ -76,10 +74,11 @@ nav a {
   justify-content: center;
   gap: 17px;
 }
-.location .icon {
+header * .location .icon {
   color: black;
 }
 
+/****** RESERVATION SECTION ***********/
 .reservation {
   background-color: #F6F6F6;
   display: flex;
@@ -107,7 +106,8 @@ nav a {
     font-size: 40px;
   }
 }
-.reservation .btn-purple {
+
+.btn-purple {
   cursor: pointer;
   width: none;
   height: 50px;
@@ -125,7 +125,7 @@ nav a {
   /* transitions que je veux appliquer sur ce bouton/lien*/
   transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
-.reservation .btn-purple:hover {
+.btn-purple:hover {
   box-shadow: 1px 1px 20px 1px #c9c7c7;
   opacity: 0.8;
   scale: 1.003; /* 1.01 */
