@@ -32,3 +32,8 @@
     border: $border;
     border-radius: $radius;
 }
+
+@mixin font-link($text-decoration: none,$color: black){
+    text-decoration: $text-decoration;
+    color: $color;
+}

@@ -5,3 +5,28 @@
 @import '../sass/components/header';
 @import '../sass/components/card';
 @import '../sass/components/footer';
+
+
+
+/****** BODY ***********/
+.main-container {
+   gap:0px;
+}
+
+.main-image {
+    width: 100%;
+}
+
+.return {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    a {
+        @include font-link();
+    }
+
+    i {
+        font-size: 24px;
+    }
+}
+
