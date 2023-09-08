@@ -75,36 +75,66 @@
     .menu-cards {
         @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
         width: inherit;
-
-        .cards {
-            @include flex($justify:space-between,$gap:5px);
-            background-color: $white;
-            border-radius: 15px;
-            padding: 15px;
-            @extend .shadow;
-
-            .name {
-                @include typo($font: $font-text, $size: 18px, $weight: normal);
-            }
-
-            .complement {
-                @include typo($font: $font-text, $size: 15px, $weight: light);
-            }
-
-            .price {
-                position: absolute;
-                top: 35px;
-                right: 20px;
-
-                p {
-                    @include typo($font: $font-text, $size: 15px, $weight: bold);
-                }
-            }
-        }
     }
 }
 
+.menu-cards .cards {
+    @include flex($justify:normal,$gap:none); /*5 */
+    background-color: $white;
+    border-radius: 15px;
+    /* padding: 15px;*/
+    @extend .shadow;
+    /* sert à caché les bords qui depasse de la div check */
+    overflow: hidden;
 
+    .name {
+        @include typo($font: $font-text, $size: 18px, $weight: normal);
+        width: 80%; /* 90 */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 15px;
+    
+            .title, .complement {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
+            }
+    
+            .complement {
+            @include typo($font: $font-text, $size: 15px, $weight: light);
+            }
+    }
 
+    .price {
+        // position: absolute; // top: 35px; // right: 20px;
+        width: 20%; /*10*/
+        transition: transform 1s ease;
+        background-color: #d49d05;
+        
+            p {
+            @include typo($font: $font-text, $size: 15px, $weight: bold);
+            }
+    }
 
+    .check {
+        @include flex($justify:center,$gap:none);
+        height: 67px;
+        width: 40%;
+        background-color: #99E2D0;
+    }
+
+    .check-moved {
+        transform: translateX(50px); /* 50 */
+        transition: transform 1s ease;
+
+    }
+        
+    &:hover {
+        .price, .check-moved {
+        transform: translateX(-20px); /* 50*/
+        }
+    }
+}
 
