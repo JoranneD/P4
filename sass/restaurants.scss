@@ -89,7 +89,7 @@
 
     .name {
         @include typo($font: $font-text, $size: 18px, $weight: normal);
-        width: 80%; /* 90 */
+        width: 90%; /* 90 */
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -109,7 +109,7 @@
 
     .price {
         // position: absolute; // top: 35px; // right: 20px;
-        width: 20%; /*10*/
+        width: 10%; /*10*/
         transition: transform 1s ease;
         background-color: #d49d05;
         
@@ -121,18 +121,18 @@
     .check {
         @include flex($justify:center,$gap:none);
         height: 67px;
-        width: 40%;
+        width: 10%;
         background-color: #99E2D0;
     }
 
-    .check-moved {
+    .moved {
         transform: translateX(50px); /* 50 */
         transition: transform 1s ease;
 
     }
         
     &:hover {
-        .price, .check-moved {
+        .price, .moved {
         transform: translateX(-20px); /* 50*/
         }
     }

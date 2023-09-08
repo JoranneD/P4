@@ -438,7 +438,7 @@ header * .location .icon {
   font-family: "Roboto", "sans-serif";
   font-size: 18px;
   font-weight: normal;
-  width: 80%; /* 90 */
+  width: 90%; /* 90 */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -456,7 +456,7 @@ header * .location .icon {
   font-weight: light;
 }
 .menu-cards .cards .price {
-  width: 20%; /*10*/
+  width: 10%; /*10*/
   transition: transform 1s ease;
   background-color: #d49d05;
 }
@@ -472,13 +472,13 @@ header * .location .icon {
   justify-content: center;
   gap: none;
   height: 67px;
-  width: 40%;
+  width: 10%;
   background-color: #99E2D0;
 }
-.menu-cards .cards .check-moved {
+.menu-cards .cards .moved {
   transform: translateX(50px); /* 50 */
   transition: transform 1s ease;
 }
-.menu-cards .cards:hover .price, .menu-cards .cards:hover .check-moved {
+.menu-cards .cards:hover .price, .menu-cards .cards:hover .moved {
   transform: translateX(-20px); /* 50*/
 }/*# sourceMappingURL=restaurants.css.map */
