@@ -12,6 +12,11 @@ header * {
         a {
             @include font-link();
         }
+
+        .logo {
+            height: auto;
+            width: auto;
+        }
     }
 
     .location {
@@ -23,6 +28,7 @@ header * {
         }
     }
 }
+
 
  /****** RESERVATION SECTION ***********/
 .reservation {
@@ -48,7 +54,7 @@ header * {
     @include button($width:none);
     @extend .purple-gradient, .shadow;
     color: $white;
-    padding: 0px 15px;
+    padding: 0px 20px; /* 0px 15px */
     /* button to link*/
     @include flex();
     text-decoration: none;
