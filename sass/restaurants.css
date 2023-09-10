@@ -65,6 +65,10 @@ header * nav a {
   text-decoration: none;
   color: black;
 }
+header * nav .logo {
+  height: auto;
+  width: auto;
+}
 header * .location {
   background-color: #EAEAEA;
   padding: 15px;
@@ -114,7 +118,7 @@ header * .location .icon {
   border: none;
   border-radius: 25px;
   color: #FFFFFF;
-  padding: 0px 15px;
+  padding: 0px 20px; /* 0px 15px */
   /* button to link*/
   display: flex;
   flex-direction: row;
@@ -368,7 +372,7 @@ header * .location .icon {
   border-radius: 25px 25px 0px 0px;
   position: relative;
   bottom: 50px;
-  padding: 20px 15px;
+  padding: 20px 15px 0px 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -387,16 +391,19 @@ header * .location .icon {
 .selection .btn {
   align-self: center;
 }
+.selection .btn-purple {
+  padding: 0px 45px;
+}
 
 .menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: normal;
-  gap: 12px;
+  gap: 40px;
   width: 100%;
 }
-.menu .starter {
+.menu .starter, .menu .main-course, .menu .dessert {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -404,7 +411,7 @@ header * .location .icon {
   gap: 12px;
   width: inherit;
 }
-.menu .starter h3 {
+.menu .starter h3, .menu .main-course h3, .menu .dessert h3 {
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
   font-weight: lighter;
@@ -438,7 +445,7 @@ header * .location .icon {
   font-family: "Roboto", "sans-serif";
   font-size: 18px;
   font-weight: normal;
-  width: 90%; /* 90 */
+  width: 80%; /* 90 */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -456,9 +463,11 @@ header * .location .icon {
   font-weight: light;
 }
 .menu-cards .cards .price {
+  position: absolute;
+  top: 35px;
+  right: 20px;
   width: 10%; /*10*/
   transition: transform 1s ease;
-  background-color: #d49d05;
 }
 .menu-cards .cards .price p {
   font-family: "Roboto", "sans-serif";
@@ -472,13 +481,25 @@ header * .location .icon {
   justify-content: center;
   gap: none;
   height: 67px;
-  width: 10%;
+  width: 20%; /* 10 */
   background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+}
+.menu-cards .cards .check i {
+  color: #FFFFFF;
+  font-size: 25px;
 }
 .menu-cards .cards .moved {
-  transform: translateX(50px); /* 50 */
+  transform: translateX(70px); /* 50 */
   transition: transform 1s ease;
 }
-.menu-cards .cards:hover .price, .menu-cards .cards:hover .moved {
-  transform: translateX(-20px); /* 50*/
+.menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
+  max-width: calc(100% - 50px); /* 100% - 50px*/
+}
+.menu-cards .cards:hover .price {
+  transform: translateX(-50px); /* -50*/
+}
+.menu-cards .cards:hover .moved {
+  transform: translateX(0);
 }/*# sourceMappingURL=restaurants.css.map */
