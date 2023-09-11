@@ -13,8 +13,18 @@
    gap:0px;
 }
 
+.main-content {
+    @media (min-width: $tablet) {
+       background-color: $white;
+    }
+}
+
 .main-image {
     width: 100%;
+
+    @media (min-width: $tablet) {
+        height: 340px;
+    }
 }
 
 .return {
@@ -53,6 +63,16 @@
         align-self: center;
         &-purple {
             padding: 0px 45px;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        width: 80%;
+        margin: auto;
+        align-items:center;
+
+        .heart {
+            right: 150px;
         }
     }
 }
@@ -157,5 +177,53 @@
             transform: translateX(0);
         }
     }
+
+    @media (min-width: $tablet) {
+        width: 100%;
+
+        .moved {
+            transform: translateX(125px);
+        }
+
+        &:hover {
+            .name{
+                .title, .complement {
+                    max-width: calc(100% - 100px); /* 100% - 50px*/
+    
+                }
+            }
+            .price {
+            transform: translateX(-100px); /* -50*/
+            }
+            .moved{
+                transform: translateX(0);
+            }
+        }
+    }
 }
 
+.footer-list {
+    @media (min-width: $tablet) {
+        gap: 10px;
+    }
+}
+
+// .starter .menu-cards {
+//     transition: transform 1s ease;
+//     transform: translateX(-400px);
+//     @keyframes like {
+//        75% {
+//         transform: scale(1.25);
+//         }
+//     } 
+// }
+
+// .main-course .menu-cards {
+//     transition: transform 2s ease;
+//     transform: translateX(-400px);
+// }
+
+// .dessert .menu-cards {
+//     transition: transform 3s ease;
+//     transform: translateX(-400px);
+// }

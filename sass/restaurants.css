@@ -350,8 +350,19 @@ header * .location .icon {
   gap: 0px;
 }
 
+@media (min-width: 768px) {
+  .main-content {
+    background-color: #FFFFFF;
+  }
+}
+
 .main-image {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .main-image {
+    height: 340px;
+  }
 }
 
 .return {
@@ -393,6 +404,16 @@ header * .location .icon {
 }
 .selection .btn-purple {
   padding: 0px 45px;
+}
+@media (min-width: 768px) {
+  .selection {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+  }
+  .selection .heart {
+    right: 150px;
+  }
 }
 
 .menu {
@@ -502,4 +523,27 @@ header * .location .icon {
 }
 .menu-cards .cards:hover .moved {
   transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .menu-cards .cards {
+    width: 100%;
+  }
+  .menu-cards .cards .moved {
+    transform: translateX(125px);
+  }
+  .menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
+    max-width: calc(100% - 100px); /* 100% - 50px*/
+  }
+  .menu-cards .cards:hover .price {
+    transform: translateX(-100px); /* -50*/
+  }
+  .menu-cards .cards:hover .moved {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-list {
+    gap: 10px;
+  }
 }/*# sourceMappingURL=restaurants.css.map */
