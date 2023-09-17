@@ -49,6 +49,9 @@
     padding: 20px 15px 0px 15px;
     @include flex($direction:column,$align:flex-start,$justify:normal,$gap:40px);
 
+    padding-bottom: 40px;
+    margin-bottom: -49px;
+
     h2 {
         @include typo();
        
@@ -68,11 +71,22 @@
 
     @media (min-width: $tablet) {
         width: 80%;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         align-items:center;
 
         .heart {
             right: 150px;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        width: 40%;
+        padding: 45px 250px 40px 250px;
+
+        .heart {
+            right: 344px; /* 377 */
+            top: 54px;
         }
     }
 }
@@ -89,7 +103,7 @@
             // width: inherit;
             text-transform: uppercase;
             // text-decoration: underline solid 5px #99E2D0;
-            border-bottom: solid 5px #99E2D0;
+            // border-bottom: solid 5px #99E2D0;
             /*test*/
             // transform: translateX(-10%);
         }
@@ -99,10 +113,17 @@
         @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
         width: inherit;
     }
+
+    .menu-deco {
+        background-color: #99E2D0;
+        width: 40px;
+        height: 2px;
+        border: 1px solid #99E2D0;
+    }
 }
 
 .menu-cards .cards {
-    @include flex($justify:normal,$gap:none); /*5 */
+    @include flex($justify:space-between,$gap:0px); /*5 */
     background-color: $white;
     border-radius: 15px;
     /* padding: 15px;*/
@@ -134,7 +155,7 @@
         position: absolute; 
         top: 35px; 
         right: 20px;
-        width: 10%; /*10*/
+        // width: 10%; /*10*/
         transition: transform 1s ease;
         
             p {
@@ -144,11 +165,13 @@
 
     .check {
         @include flex($justify:center,$gap:none);
-        height: 67px;
-        width: 20%; /* 10 */
+        height: 70px; /* 67 */
+        width: 70px; /* 10 */
         background-color: #99E2D0;
-        position: absolute;
+        //position: absolute; mettre space-between
         right: 0;
+        
+
 
         i {
             color: $white;
@@ -166,12 +189,12 @@
     &:hover {
         .name{
             .title, .complement {
-                max-width: calc(100% - 50px); /* 100% - 50px*/
+                max-width: calc(100% - 70px); /* 100% - 50px*/
 
             }
         }
         .price {
-        transform: translateX(-50px); /* -50*/
+        transform: translateX(-70px); /* -50*/
         }
         .moved{
             transform: translateX(0);
@@ -180,25 +203,6 @@
 
     @media (min-width: $tablet) {
         width: 100%;
-
-        .moved {
-            transform: translateX(125px);
-        }
-
-        &:hover {
-            .name{
-                .title, .complement {
-                    max-width: calc(100% - 100px); /* 100% - 50px*/
-    
-                }
-            }
-            .price {
-            transform: translateX(-100px); /* -50*/
-            }
-            .moved{
-                transform: translateX(0);
-            }
-        }
     }
 }
 
