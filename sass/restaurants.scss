@@ -112,6 +112,18 @@
     .menu-cards {
         @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
         width: inherit;
+        /* SLIDER ANIMATION */
+        animation: slide 1s ease;
+
+        @keyframes slide {
+            0%{
+                transform: translateX(-600px);
+            }
+
+            100%{
+                transform: translateX(0px);
+            }
+        }
     }
 
     .menu-deco {

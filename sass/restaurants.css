@@ -469,6 +469,16 @@ header * .location .icon {
   justify-content: normal;
   gap: 20px;
   width: inherit;
+  /* SLIDER ANIMATION */
+  animation: slide 1s ease;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .menu .menu-deco {
   background-color: #99E2D0;
