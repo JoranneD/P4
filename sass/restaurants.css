@@ -282,6 +282,9 @@ header * .location .icon {
     flex-direction: row-reverse;
     padding: 20px 15px;
   }
+  .footer .title {
+    padding: 0px 15px 0px 15px;
+  }
 }
 @media (min-width: 1024px) {
   .footer {
@@ -289,6 +292,9 @@ header * .location .icon {
     flex-direction: row-reverse;
     padding: 25px 30px; /* 40px 30px*/
     gap: 16px;
+  }
+  .footer .title {
+    padding: 0px 15px 0px 15px;
   }
 }
 
@@ -309,12 +315,16 @@ header * .location .icon {
   .footer-list {
     flex-direction: row;
     gap: 35px;
+    align-items: flex-end;
+    padding: 0px; /*15*/
   }
 }
 @media (min-width: 1024px) {
   .footer-list {
     flex-direction: row;
     gap: 35px;
+    align-items: flex-end;
+    padding: 0px; /*15*/
   }
 }
 
