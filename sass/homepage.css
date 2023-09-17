@@ -132,7 +132,7 @@ header * .location .icon {
 .btn-purple:hover {
   box-shadow: 1px 1px 20px 1px #c9c7c7;
   opacity: 0.8;
-  scale: 1.003; /* 1.01 */
+  transform: scale(1.01);
 }
 
 .steps-card {

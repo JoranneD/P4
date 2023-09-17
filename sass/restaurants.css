@@ -132,7 +132,7 @@ header * .location .icon {
 .btn-purple:hover {
   box-shadow: 1px 1px 20px 1px #c9c7c7;
   opacity: 0.8;
-  scale: 1.003; /* 1.01 */
+  transform: scale(1.01);
 }
 
 .steps-card {
@@ -389,6 +389,8 @@ header * .location .icon {
   align-items: flex-start;
   justify-content: normal;
   gap: 40px;
+  padding-bottom: 40px;
+  margin-bottom: -49px;
 }
 .selection h2 {
   font-family: "Shrikhand", "cursive";
@@ -408,11 +410,22 @@ header * .location .icon {
 @media (min-width: 768px) {
   .selection {
     width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
   }
   .selection .heart {
     right: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .selection {
+    width: 40%;
+    padding: 45px 250px 40px 250px;
+  }
+  .selection .heart {
+    right: 344px; /* 377 */
+    top: 54px;
   }
 }
 
@@ -437,7 +450,6 @@ header * .location .icon {
   font-size: 16px;
   font-weight: lighter;
   text-transform: uppercase;
-  border-bottom: solid 5px #99E2D0;
   /*test*/
 }
 .menu .menu-cards {
@@ -448,13 +460,19 @@ header * .location .icon {
   gap: 20px;
   width: inherit;
 }
+.menu .menu-deco {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 2px;
+  border: 1px solid #99E2D0;
+}
 
 .menu-cards .cards {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: normal;
-  gap: none;
+  justify-content: space-between;
+  gap: 0px;
   /*5 */
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -487,7 +505,6 @@ header * .location .icon {
   position: absolute;
   top: 35px;
   right: 20px;
-  width: 10%; /*10*/
   transition: transform 1s ease;
 }
 .menu-cards .cards .price p {
@@ -501,10 +518,9 @@ header * .location .icon {
   align-items: center;
   justify-content: center;
   gap: none;
-  height: 67px;
-  width: 20%; /* 10 */
+  height: 70px; /* 67 */
+  width: 70px; /* 10 */
   background-color: #99E2D0;
-  position: absolute;
   right: 0;
 }
 .menu-cards .cards .check i {
@@ -516,10 +532,10 @@ header * .location .icon {
   transition: transform 1s ease;
 }
 .menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
-  max-width: calc(100% - 50px); /* 100% - 50px*/
+  max-width: calc(100% - 70px); /* 100% - 50px*/
 }
 .menu-cards .cards:hover .price {
-  transform: translateX(-50px); /* -50*/
+  transform: translateX(-70px); /* -50*/
 }
 .menu-cards .cards:hover .moved {
   transform: translateX(0);
@@ -527,18 +543,6 @@ header * .location .icon {
 @media (min-width: 768px) {
   .menu-cards .cards {
     width: 100%;
-  }
-  .menu-cards .cards .moved {
-    transform: translateX(125px);
-  }
-  .menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
-    max-width: calc(100% - 100px); /* 100% - 50px*/
-  }
-  .menu-cards .cards:hover .price {
-    transform: translateX(-100px); /* -50*/
-  }
-  .menu-cards .cards:hover .moved {
-    transform: translateX(0);
   }
 }
 
