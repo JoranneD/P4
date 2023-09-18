@@ -112,18 +112,6 @@
     .menu-cards {
         @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
         width: inherit;
-        /* SLIDER ANIMATION */
-        animation: slide 1s ease;
-
-        @keyframes slide {
-            0%{
-                transform: translateX(-600px);
-            }
-
-            100%{
-                transform: translateX(0px);
-            }
-        }
     }
 
     .menu-deco {
@@ -133,6 +121,47 @@
         border: 1px solid #99E2D0;
     }
 }
+
+/* SLIDER ANIMATION */
+.starter .menu-cards {
+    animation: slide 1s ease;
+    @keyframes slide {
+        0%{
+            transform: translateX(-600px);
+        }
+
+        100%{
+            transform: translateX(0px);
+        }
+    }
+}
+
+.main-course .menu-cards {
+    animation: slide 1.3s ease;
+    @keyframes slide {
+        0%{
+            transform: translateX(-600px);
+        }
+
+        100%{
+            transform: translateX(0px);
+        }
+    }
+}
+
+.dessert .menu-cards {
+    animation: slide 1.5s ease;
+    @keyframes slide {
+        0%{
+            transform: translateX(-600px);
+        }
+
+        100%{
+            transform: translateX(0px);
+        }
+    }
+} 
+
 
 .menu-cards .cards {
     @include flex($justify:space-between,$gap:0px); /*5 */
