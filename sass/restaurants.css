@@ -469,7 +469,16 @@ header * .location .icon {
   justify-content: normal;
   gap: 20px;
   width: inherit;
-  /* SLIDER ANIMATION */
+}
+.menu .menu-deco {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 2px;
+  border: 1px solid #99E2D0;
+}
+
+/* SLIDER ANIMATION */
+.starter .menu-cards {
   animation: slide 1s ease;
 }
 @keyframes slide {
@@ -480,11 +489,29 @@ header * .location .icon {
     transform: translateX(0px);
   }
 }
-.menu .menu-deco {
-  background-color: #99E2D0;
-  width: 40px;
-  height: 2px;
-  border: 1px solid #99E2D0;
+
+.main-course .menu-cards {
+  animation: slide 1.3s ease;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.dessert .menu-cards {
+  animation: slide 1.5s ease;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .menu-cards .cards {

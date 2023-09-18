@@ -533,13 +533,13 @@ header * .location .icon {
   }
 }
 .loader .loader-icon {
-  font-size: 100px;
+  font-size: 70px;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 45%;
   animation: spin 1s ease;
   opacity: 0;
 }
@@ -554,5 +554,19 @@ header * .location .icon {
   100% {
     transform: rotate(0deg);
     opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  .loader .loader-icon {
+    font-size: 85px;
+    top: 40%;
+    left: 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .loader .loader-icon {
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
   }
 }/*# sourceMappingURL=homepage.css.map */
