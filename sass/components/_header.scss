@@ -12,7 +12,6 @@ header * {
         a {
             @include font-link();
         }
-
         .logo {
             height: auto;
             width: auto;
@@ -22,9 +21,34 @@ header * {
     .location {
         background-color: $medium-grey;
         padding: 15px;
-        @include flex($gap:17px);
-        .icon {
-            color: black;
+    }
+
+    .searchbar {
+        @include flex($gap:5px);
+
+        .searchbar-label {
+            @include flex($align:center, $justify:flex-end, $gap:0px);
+            width: 30px;
+        }
+
+        .searchbar-input {
+            border: 0px;
+            background-color: $medium-grey;
+            padding: 5px 0px;
+            border-radius: 15px;
+            width: 150px;
+        
+            &::placeholder{
+                font-weight: bold;
+                color: black;
+                opacity: 1;
+                text-align: center;
+            }
+
+            &:focus-visible {
+                outline: none;
+                background-color: $light-grey;
+            }
         }
     }
 }
@@ -59,7 +83,7 @@ header * {
     @include flex();
     text-decoration: none;
     /* transitions que je veux appliquer sur ce bouton/lien*/
-    transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     &:hover {
         box-shadow: 1px 1px 20px 1px #c9c7c7;
         opacity: 0.8;

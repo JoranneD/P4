@@ -72,14 +72,44 @@ header * nav .logo {
 header * .location {
   background-color: #EAEAEA;
   padding: 15px;
+}
+header * .searchbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 17px;
+  gap: 5px;
 }
-header * .location .icon {
+header * .searchbar .searchbar-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0px;
+  width: 30px;
+}
+header * .searchbar .searchbar-input {
+  border: 0px;
+  background-color: #EAEAEA;
+  padding: 5px 0px;
+  border-radius: 15px;
+  width: 150px;
+}
+header * .searchbar .searchbar-input::-moz-placeholder {
+  font-weight: bold;
   color: black;
+  opacity: 1;
+  text-align: center;
+}
+header * .searchbar .searchbar-input::placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 1;
+  text-align: center;
+}
+header * .searchbar .searchbar-input:focus-visible {
+  outline: none;
+  background-color: #F6F6F6;
 }
 
 /****** RESERVATION SECTION ***********/
@@ -127,7 +157,7 @@ header * .location .icon {
   gap: 15px;
   text-decoration: none;
   /* transitions que je veux appliquer sur ce bouton/lien*/
-  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .btn-purple:hover {
   box-shadow: 1px 1px 20px 1px #c9c7c7;

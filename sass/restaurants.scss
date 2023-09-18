@@ -21,7 +21,8 @@
 
 .main-image {
     width: 100%;
-
+    max-height: 250px;
+    
     @media (min-width: $tablet) {
         height: 340px;
     }
@@ -54,7 +55,6 @@
 
     h2 {
         @include typo();
-       
     }
 
     .heart {
@@ -85,9 +85,18 @@
         padding: 45px 250px 40px 250px;
 
         .heart {
-            right: 344px; /* 377 */
+            right: 344px;
             top: 54px;
         }
+    }
+}
+
+.selection-description{
+    @include flex($justify:space-between,$gap:30px);
+    // width: 90%;
+
+    .heart {
+        position: initial;
     }
 }
 
@@ -100,12 +109,7 @@
     width: inherit;
         h3 {
             @include typo($font: $font-text, $size: 16px, $weight: lighter);
-            // width: inherit;
             text-transform: uppercase;
-            // text-decoration: underline solid 5px #99E2D0;
-            // border-bottom: solid 5px #99E2D0;
-            /*test*/
-            // transform: translateX(-10%);
         }
     }
 
@@ -125,56 +129,37 @@
 /* SLIDER ANIMATION */
 .starter .menu-cards {
     animation: slide 1s ease;
-    @keyframes slide {
-        0%{
-            transform: translateX(-600px);
-        }
-
-        100%{
-            transform: translateX(0px);
-        }
-    }
 }
 
 .main-course .menu-cards {
     animation: slide 1.3s ease;
-    @keyframes slide {
-        0%{
-            transform: translateX(-600px);
-        }
-
-        100%{
-            transform: translateX(0px);
-        }
-    }
 }
 
 .dessert .menu-cards {
     animation: slide 1.5s ease;
-    @keyframes slide {
-        0%{
-            transform: translateX(-600px);
-        }
+}
 
-        100%{
-            transform: translateX(0px);
-        }
+@keyframes slide {
+    0%{
+        transform: translateX(-600px);
     }
-} 
 
+    100%{
+        transform: translateX(0px);
+    }
+}
 
 .menu-cards .cards {
-    @include flex($justify:space-between,$gap:0px); /*5 */
+    @include flex($justify:space-between,$gap:0px);
     background-color: $white;
     border-radius: 15px;
-    /* padding: 15px;*/
     @extend .shadow;
     /* sert à caché les bords qui depasse de la div check */
     overflow: hidden;
 
     .name {
         @include typo($font: $font-text, $size: 18px, $weight: normal);
-        width: 80%; /* 90 */
+        width: 80%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -196,7 +181,6 @@
         position: absolute; 
         top: 35px; 
         right: 20px;
-        // width: 10%; /*10*/
         transition: transform 1s ease;
         
             p {
@@ -206,14 +190,11 @@
 
     .check {
         @include flex($justify:center,$gap:none);
-        height: 70px; /* 67 */
-        width: 70px; /* 10 */
+        height: 70px;
+        width: 70px;
         background-color: #99E2D0;
-        //position: absolute; mettre space-between
         right: 0;
         
-
-
         i {
             color: $white;
             font-size: 25px;
@@ -222,20 +203,19 @@
     }
 
     .moved {
-        transform: translateX(70px); /* 50 */
+        transform: translateX(70px);
         transition: transform 1s ease;
-
     }
 
     &:hover {
         .name{
             .title, .complement {
-                max-width: calc(100% - 70px); /* 100% - 50px*/
+                max-width: calc(100% - 70px);
 
             }
         }
         .price {
-        transform: translateX(-70px); /* -50*/
+        transform: translateX(-70px);
         }
         .moved{
             transform: translateX(0);
@@ -252,23 +232,3 @@
         gap: 10px;
     }
 }
-
-// .starter .menu-cards {
-//     transition: transform 1s ease;
-//     transform: translateX(-400px);
-//     @keyframes like {
-//        75% {
-//         transform: scale(1.25);
-//         }
-//     } 
-// }
-
-// .main-course .menu-cards {
-//     transition: transform 2s ease;
-//     transform: translateX(-400px);
-// }
-
-// .dessert .menu-cards {
-//     transition: transform 3s ease;
-//     transform: translateX(-400px);
-// }
