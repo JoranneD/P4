@@ -25,11 +25,16 @@
         <div class="navigation-and-location">
             <nav>
                 <h1 class="title">ohmyfood</h1>
-                <!-- <img class="logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo du site"> -->
             </nav>
             <div class="location">
-                <i class="icon fa-solid fa-location-dot"></i>
-                <div><p>Paris, Belleville</p></div>
+                <form class="searchbar">
+                    <label class="searchbar-label" for="town-searchbar"><i class="fa-solid fa-location-dot"></i></label>
+                    <input class="searchbar-input" type="search" id="town-searchbar" name="town-searchbar" placeholder="Paris, Belleville">
+                    <!-- <button class="searchbar-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                </form>
+
+                <!-- <i class="icon fa-solid fa-location-dot"></i>
+                <div><p>Paris, Belleville</p></div> -->
             </div>
         </div>
     </header>
