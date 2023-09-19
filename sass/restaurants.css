@@ -91,7 +91,7 @@ header * .searchbar .searchbar-label {
 header * .searchbar .searchbar-input {
   border: 0px;
   background-color: #EAEAEA;
-  padding: 5px 0px;
+  padding: 5px 0px 5px 15px;
   border-radius: 15px;
   width: 150px;
 }
@@ -110,6 +110,14 @@ header * .searchbar .searchbar-input::placeholder {
 header * .searchbar .searchbar-input:focus-visible {
   outline: none;
   background-color: #F6F6F6;
+}
+header * .searchbar .searchbar-button {
+  background-color: #EAEAEA;
+  color: #EAEAEA;
+  border: none;
+}
+header * .searchbar .searchbar-button:hover {
+  color: #F6F6F6;
 }
 
 /****** RESERVATION SECTION ***********/
