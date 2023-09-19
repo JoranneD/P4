@@ -41,7 +41,7 @@
     }
 }
 
-
+/****** MAIN ***********/
 .selection {
     background-color: $light-grey;
     border-radius: 25px 25px 0px 0px;
@@ -53,7 +53,7 @@
     padding-bottom: 40px;
     margin-bottom: -49px;
 
-    h2 {
+    .title {
         @include typo();
     }
 
@@ -93,140 +93,13 @@
 
 .selection-description{
     @include flex($justify:space-between,$gap:30px);
-    // width: 90%;
 
     .heart {
         position: initial;
     }
 }
 
-.menu {
-    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:40px);
-    width: 100%;
-
-    .starter, .main-course, .dessert {
-    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:12px);
-    width: inherit;
-        h3 {
-            @include typo($font: $font-text, $size: 16px, $weight: lighter);
-            text-transform: uppercase;
-        }
-    }
-
-    .menu-cards {
-        @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
-        width: inherit;
-    }
-
-    .menu-deco {
-        background-color: #99E2D0;
-        width: 40px;
-        height: 2px;
-        border: 1px solid #99E2D0;
-    }
-}
-
-/* SLIDER ANIMATION */
-.starter .menu-cards {
-    animation: slide 1s ease;
-}
-
-.main-course .menu-cards {
-    animation: slide 1.3s ease;
-}
-
-.dessert .menu-cards {
-    animation: slide 1.5s ease;
-}
-
-@keyframes slide {
-    0%{
-        transform: translateX(-600px);
-    }
-
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-.menu-cards .cards {
-    @include flex($justify:space-between,$gap:0px);
-    background-color: $white;
-    border-radius: 15px;
-    @extend .shadow;
-    /* sert à caché les bords qui depasse de la div check */
-    overflow: hidden;
-
-    .name {
-        @include typo($font: $font-text, $size: 18px, $weight: normal);
-        width: 80%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding: 15px;
-    
-            .title, .complement {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                width: 100%;
-            }
-    
-            .complement {
-            @include typo($font: $font-text, $size: 15px, $weight: light);
-            }
-    }
-
-    .price {
-        position: absolute; 
-        top: 35px; 
-        right: 20px;
-        transition: transform 1s ease;
-        
-            p {
-            @include typo($font: $font-text, $size: 15px, $weight: bold);
-            }
-    }
-
-    .check {
-        @include flex($justify:center,$gap:none);
-        height: 70px;
-        width: 70px;
-        background-color: #99E2D0;
-        right: 0;
-        
-        i {
-            color: $white;
-            font-size: 25px;
-        }
-        
-    }
-
-    .moved {
-        transform: translateX(70px);
-        transition: transform 1s ease;
-    }
-
-    &:hover {
-        .name{
-            .title, .complement {
-                max-width: calc(100% - 70px);
-
-            }
-        }
-        .price {
-        transform: translateX(-70px);
-        }
-        .moved{
-            transform: translateX(0);
-        }
-    }
-
-    @media (min-width: $tablet) {
-        width: 100%;
-    }
-}
-
+/****** FOOTER ***********/
 .footer-list {
     @media (min-width: $tablet) {
         gap: 10px;

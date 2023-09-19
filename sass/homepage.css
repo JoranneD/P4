@@ -14,10 +14,11 @@ body * {
 
 /****** Labels ***********/
 /****** SHADOWS ***********/
-.shadow, .steps-card, .btn-purple {
+.shadow, .menu-cards .cards, .steps-card, .btn-purple {
   box-shadow: 1px 4px 6px 0px #b6b5b5;
 }
 
+/****** BODY ***********/
 body * {
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
@@ -25,7 +26,6 @@ body * {
      object-fit: cover;
 }
 
-/****** BODY ***********/
 .main-container {
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ body * {
   justify-content: normal;
   gap: 30px;
   margin: auto;
-  background-color: #F6F6F6; /* D2D2D2 */
+  background-color: #F6F6F6;
 }
 .main-container section img {
   width: 100%;
@@ -173,6 +173,7 @@ header * .searchbar .searchbar-button:hover {
   transform: scale(1.01);
 }
 
+/* HOMEPAGE */
 .steps-card {
   position: relative;
   background-color: #F6F6F6;
@@ -302,7 +303,142 @@ header * .searchbar .searchbar-button:hover {
   opacity: 1;
 }
 
-/****** UTILS ***********/
+/* RESTAURANT PAGES CARDS */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 40px;
+  width: 100%;
+}
+.menu .starter, .menu .main-course, .menu .dessert {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 12px;
+  width: inherit;
+}
+.menu .starter .title, .menu .main-course .title, .menu .dessert .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.menu .menu-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+  width: inherit;
+}
+.menu .menu-deco {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 2px;
+  border: 1px solid #99E2D0;
+}
+
+/* SLIDER ANIMATION */
+.starter .menu-cards {
+  animation: slide 1s ease;
+}
+
+.main-course .menu-cards {
+  animation: slide 1.3s ease;
+}
+
+.dessert .menu-cards {
+  animation: slide 1.5s ease;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.menu-cards .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  /* sert à caché les bords qui depasse de la div check */
+  overflow: hidden;
+}
+.menu-cards .cards .name {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: normal;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 15px;
+}
+.menu-cards .cards .name .title, .menu-cards .cards .name .complement {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.menu-cards .cards .name .complement {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: light;
+}
+.menu-cards .cards .price {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  transition: transform 1s ease;
+}
+.menu-cards .cards .price p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: bold;
+}
+.menu-cards .cards .check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: none;
+  height: 70px;
+  width: 70px;
+  background-color: #99E2D0;
+  right: 0;
+}
+.menu-cards .cards .check i {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+.menu-cards .cards .moved {
+  transform: translateX(70px);
+  transition: transform 1s ease;
+}
+.menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
+  max-width: calc(100% - 70px);
+}
+.menu-cards .cards:hover .price {
+  transform: translateX(-70px);
+}
+.menu-cards .cards:hover .moved {
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .menu-cards .cards {
+    width: 100%;
+  }
+}
+
 /****** FOOTER ***********/
 .footer {
   background-color: #353535;
