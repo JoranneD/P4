@@ -56,7 +56,7 @@
     }
     .cards-information {
         padding: 15px;
-        @include flex($direction:row,$align:none,$justify:center,$gap:15px);
+        @include flex($direction:row,$align:unset,$justify:center,$gap:15px);
         justify-content:space-between;
         .cards-title {
         font-size: 18px;
@@ -128,7 +128,7 @@
     .starter, .main-course, .dessert {
     @include flex($direction:column,$align:flex-start,$justify:normal,$gap:12px);
     width: inherit;
-        .title {
+        h3.title {
             @include typo($font: $font-text, $size: 16px, $weight: lighter);
             text-transform: uppercase;
         }
@@ -192,9 +192,13 @@
                 text-overflow: ellipsis;
                 width: 100%;
             }
+
+            .title {
+                @include typo($font: $font-text, $size: 18px, $weight: unset);
+            }
     
             .complement {
-            @include typo($font: $font-text, $size: 15px, $weight: light);
+            @include typo($font: $font-text, $size: 15px, $weight: lighter);
             }
     }
 
@@ -210,10 +214,10 @@
     }
 
     .check {
-        @include flex($justify:center,$gap:none);
+        @include flex($justify:center,$gap:unset);
         height: 70px;
         width: 70px;
-        background-color: #99E2D0;
+        background-color: $square-background;
         right: 0;
         
         i {
