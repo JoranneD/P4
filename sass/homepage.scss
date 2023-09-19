@@ -35,7 +35,6 @@
 
 .steps-list {
     @include flex($direction:column,$align:normal,$justify:normal,$gap:25px);
-    // margin-bottom: 50px; A METTRE OU PAS ?
     .dot {
         @include flex();
         @include button($width:24px,$height:24px,$border:none,$radius:50%);
