@@ -17,7 +17,7 @@
     padding: $padding;
 }
 
-@mixin position($top:none,$left:none,$right:none,$bottom:none){
+@mixin position($top:unset,$left:unset,$right:unset,$bottom:unset){
     position: absolute;
     top: $top;
     left: $left;

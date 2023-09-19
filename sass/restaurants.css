@@ -151,7 +151,7 @@ header * .searchbar .searchbar-button:hover {
 
 .btn-purple {
   cursor: pointer;
-  width: none;
+  width: unset;
   height: 50px;
   border: none;
   border-radius: 25px;
@@ -238,7 +238,7 @@ header * .searchbar .searchbar-button:hover {
   padding: 15px;
   display: flex;
   flex-direction: row;
-  align-items: none;
+  align-items: unset;
   justify-content: center;
   gap: 15px;
   justify-content: space-between;
@@ -320,7 +320,7 @@ header * .searchbar .searchbar-button:hover {
   gap: 12px;
   width: inherit;
 }
-.menu .starter .title, .menu .main-course .title, .menu .dessert .title {
+.menu .starter h3.title, .menu .main-course h3.title, .menu .dessert h3.title {
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
   font-weight: lighter;
@@ -389,10 +389,15 @@ header * .searchbar .searchbar-button:hover {
   text-overflow: ellipsis;
   width: 100%;
 }
+.menu-cards .cards .name .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: unset;
+}
 .menu-cards .cards .name .complement {
   font-family: "Roboto", "sans-serif";
   font-size: 15px;
-  font-weight: light;
+  font-weight: lighter;
 }
 .menu-cards .cards .price {
   position: absolute;
@@ -410,7 +415,7 @@ header * .searchbar .searchbar-button:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: none;
+  gap: unset;
   height: 70px;
   width: 70px;
   background-color: #99E2D0;

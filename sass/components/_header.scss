@@ -85,7 +85,7 @@ header * {
 }
 
 .btn-purple {
-    @include button($width:none);
+    @include button($width:unset);
     @extend .purple-gradient, .shadow;
     color: $white;
     padding: 0px 20px; /* 0px 15px */
