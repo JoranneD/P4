@@ -1,0 +1,248 @@
+/* HOMEPAGE */
+.steps-card {
+    position: relative;
+    background-color: $light-grey;
+    @include flex($gap:25px);
+    @extend .shadow;
+    height: 72px;
+    border-radius: 25px;
+    .icon {
+        color: $grey;
+        font-size: 20px;
+    }
+    .fa-store {
+        color: $round-background;
+    }
+    p {
+        font-weight: bold;
+    } 
+    
+    @media (min-width: $tablet) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        width: 30%;
+    }
+
+    @media (min-width: $desktop) {
+        width: 30%;
+    }
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.cards {
+    position: relative;
+    background-color: $white;
+    border-radius: 25px;
+    gap: 20px;
+
+    
+    @media (min-width: $tablet) {
+        width: 45%;
+    }
+
+    @media (min-width: $desktop) {
+        width: 45%;
+    }
+
+    .cards-image {
+    height: 231px;
+    border-radius: 25px 25px 0px 0px;
+    }
+    .cards-information {
+        padding: 15px;
+        @include flex($direction:row,$align:unset,$justify:center,$gap:15px);
+        justify-content:space-between;
+        .cards-title {
+        font-size: 18px;
+        }
+        .cards-text {
+        font-size: 17px;
+        font-weight: lighter;
+        }
+    }
+}
+
+
+.heart {
+    @include flex($direction:column,$align:normal,$justify:center,$gap:normal);
+    /* enlever le border et background-color du bouton */
+    border: none; 
+    background: none;
+    /* positionne le bouton */
+    position: absolute;
+    /* coordonnées de positionnement */
+    top: 85%;
+    right: 5%;
+    /* dimensions du bouton*/
+    height: 24px; 
+    width: 24px;
+
+    // a {
+    //     pointer-events: none;
+    // }
+
+    i {
+        /* se positionne selon son parent */
+        position: absolute; 
+        font-size: 24px;
+        /* on veux que la transition opacity s'applique sur le i.*/
+        transition: opacity 1s ease-in-out; 
+    }
+    /* full, c'est l'icone rempli */
+    .full {
+        /* on ne veux pas le voir */
+        opacity: 0;
+        /* mais en réalité il à cette couleur */
+        background: linear-gradient(#FF79DA, #9356DC);
+        /* on veux que notre couleur(background) prenne le meme espace que prend le texte(i) peu importe le navigateur */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    /* au survol du bouton heart ...*/
+    &:hover {
+        /* tout ce qu'il y a dans la classe empty n'est plus visible*/
+        .empty {
+            opacity: 0;
+        }
+        /*tout ce qu'il y a dans la classe full est visible*/
+        .full {
+            opacity: 1;
+        }
+    }  
+}
+
+
+/* RESTAURANT PAGES CARDS */
+.menu {
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:40px);
+    width: 100%;
+
+    .starter, .main-course, .dessert {
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:12px);
+    width: inherit;
+        h3.title {
+            @include typo($font: $font-text, $size: 16px, $weight: lighter);
+            text-transform: uppercase;
+        }
+    }
+
+    .menu-cards {
+        @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+        width: inherit;
+    }
+
+    .menu-deco {
+        background-color: $square-background;
+        width: 40px;
+        height: 2px;
+        border: 1px solid $square-background;
+    }
+}
+
+/* SLIDER ANIMATION */
+.starter .menu-cards {
+    animation: slide 1s ease;
+}
+
+.main-course .menu-cards {
+    animation: slide 1.3s ease;
+}
+
+.dessert .menu-cards {
+    animation: slide 1.5s ease;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(-600px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.menu-cards .cards {
+    @include flex($justify:space-between,$gap:0px);
+    background-color: $white;
+    border-radius: 15px;
+    @extend .shadow;
+    /* sert à caché les bords qui depasse de la div check */
+    overflow: hidden;
+    max-height: 70px;
+
+    .name {
+        @include typo($font: $font-text, $size: 18px, $weight: normal);
+        width: 80%;
+        padding: 15px;
+    
+            .title, .complement {
+                width: 100%;
+            }
+
+            .title {
+                @include typo($font: $font-text, $size: 18px, $weight: unset);
+            }
+    
+            .complement {
+            @include typo($font: $font-text, $size: 15px, $weight: lighter);
+            }
+    }
+
+    .price {
+        position: absolute; 
+        top: 35px; 
+        right: 20px;
+        transition: transform 1s ease;
+        
+            p {
+            @include typo($font: $font-text, $size: 15px, $weight: bold);
+            }
+    }
+
+    .check {
+        @include flex($justify:center,$gap:unset);
+        position: absolute;
+        top: 0;
+        right: -70px;
+        height: 70px;
+        width: 70px;
+        background-color: $square-background;
+        transition: transform 1s ease;
+        
+        i {
+            color: $white;
+            font-size: 25px;
+        }
+    }
+
+
+    &:hover {
+        .name{
+            .title, .complement {
+                max-width: calc(100% - 70px); /* reduit la taille du conteneur de 70px */
+                overflow: hidden; /* empêche le texte sorti d'etre visible hors du conteneur */
+                white-space: nowrap; /* évite que le texte se mette sur plusieurs lignes */
+                text-overflow: ellipsis; /* ajoute des points de suspensions si texte dépasse du conteneur */
+            }
+        }
+        .price {
+        transform: translateX(-70px);
+        }
+        .check{
+            transform: translateX(-70px);
+        }
+    }
+
+    @media (min-width: $tablet) {
+        width: 100%;
+    }
+}

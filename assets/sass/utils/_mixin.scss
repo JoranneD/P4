@@ -1,0 +1,45 @@
+@mixin flex($direction:row,$align:center,$justify:center,$gap:15px){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin typo($font: $font-title, $size: 28px, $weight: normal){
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin margins($margin:0px,$padding:0px){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin position($top:unset,$left:unset,$right:unset,$bottom:unset){
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin button($width:70%,$height:50px,$border:none,$radius:25px){
+    cursor: pointer;
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin font-link($text-decoration: none,$color: black){
+    text-decoration: $text-decoration;
+    color: $color;
+}
+
+@mixin undertitle-deco($display: inline-block,$border: solid 5px #99E2D0,$padding: 10px) {
+    display: $display;
+    border-bottom: $border;
+    padding-bottom: $padding;
+}

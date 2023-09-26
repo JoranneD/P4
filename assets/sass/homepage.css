@@ -1,0 +1,745 @@
+@charset "UTF-8";
+/****** UTILS ***********/
+body * {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+/****** FONTS ***********/
+/****** Button ***********/
+.purple-gradient, .btn-purple {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+/****** Labels ***********/
+/****** SHADOWS ***********/
+.shadow, .menu-cards .cards, .steps-card, .btn-purple {
+  box-shadow: 1px 4px 6px 0px #b6b5b5;
+}
+
+/****** BODY ***********/
+body * {
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 30px;
+  margin: auto;
+  background-color: #F6F6F6;
+}
+.main-container section img {
+  width: 100%;
+}
+
+/****** Button ***********/
+.purple-gradient, .btn-purple {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+/****** Labels ***********/
+/****** FONTS ***********/
+/****** COMPONENTS ***********/
+/****** HEADER ***********/
+header * {
+  text-align: center;
+  /****** NAVIGATION ET LOCATION SECTION ***********/
+}
+header * nav {
+  background-color: #FFFFFF;
+  padding: 15px;
+}
+header * nav .title {
+  font-family: "Shrikhand", "cursive";
+  font-size: 30px;
+  font-weight: normal;
+}
+header * nav a {
+  text-decoration: none;
+  color: black;
+}
+header * nav .logo {
+  height: auto;
+  width: auto;
+}
+header * .location {
+  background-color: #EAEAEA;
+  padding: 15px;
+}
+header * .searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+header * .searchbar .searchbar-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0px;
+  width: 30px;
+}
+header * .searchbar .searchbar-input {
+  border: 0px;
+  background-color: #EAEAEA;
+  padding: 5px 0px 5px 15px;
+  border-radius: 15px;
+  width: 150px;
+}
+header * .searchbar .searchbar-input::-moz-placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 1;
+  text-align: center;
+}
+header * .searchbar .searchbar-input::placeholder {
+  font-weight: bold;
+  color: black;
+  opacity: 1;
+  text-align: center;
+}
+header * .searchbar .searchbar-input:focus-visible {
+  outline: none;
+  background-color: #F6F6F6;
+}
+header * .searchbar .searchbar-button {
+  background-color: #EAEAEA;
+  color: #EAEAEA;
+  border: none;
+}
+header * .searchbar .searchbar-button:hover {
+  color: #F6F6F6;
+}
+
+/****** RESERVATION SECTION ***********/
+.reservation {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+.reservation .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+.reservation p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: lighter;
+}
+@media (min-width: 1024px) {
+  .reservation {
+    gap: 18px;
+  }
+  .reservation .title {
+    font-size: 40px;
+  }
+}
+
+.btn-purple {
+  cursor: pointer;
+  width: unset;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  color: #FFFFFF;
+  padding: 0px 20px; /* 0px 15px */
+  /* button to link*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  /* transitions que je veux appliquer sur ce bouton/lien*/
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.btn-purple:hover {
+  box-shadow: 1px 1px 20px 1px #c9c7c7;
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+/* HOMEPAGE */
+.steps-card {
+  position: relative;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 72px;
+  border-radius: 25px;
+}
+.steps-card .icon {
+  color: #7E7E7E;
+  font-size: 20px;
+}
+.steps-card .fa-store {
+  color: #9356DC;
+}
+.steps-card p {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .steps-card {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .steps-card {
+    width: 30%;
+  }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .cards {
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .cards {
+    width: 45%;
+  }
+}
+.cards .cards-image {
+  height: 231px;
+  border-radius: 25px 25px 0px 0px;
+}
+.cards .cards-information {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+.cards .cards-information .cards-title {
+  font-size: 18px;
+}
+.cards .cards-information .cards-text {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.heart {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  gap: normal;
+  /* enlever le border et background-color du bouton */
+  border: none;
+  background: none;
+  /* positionne le bouton */
+  position: absolute;
+  /* coordonnées de positionnement */
+  top: 85%;
+  right: 5%;
+  /* dimensions du bouton*/
+  height: 24px;
+  width: 24px;
+  /* full, c'est l'icone rempli */
+  /* au survol du bouton heart ...*/
+}
+.heart i {
+  /* se positionne selon son parent */
+  position: absolute;
+  font-size: 24px;
+  /* on veux que la transition opacity s'applique sur le i.*/
+  transition: opacity 1s ease-in-out;
+}
+.heart .full {
+  /* on ne veux pas le voir */
+  opacity: 0;
+  /* mais en réalité il à cette couleur */
+  background: linear-gradient(#FF79DA, #9356DC);
+  /* on veux que notre couleur(background) prenne le meme espace que prend le texte(i) peu importe le navigateur */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.heart:hover {
+  /* tout ce qu'il y a dans la classe empty n'est plus visible*/
+  /*tout ce qu'il y a dans la classe full est visible*/
+}
+.heart:hover .empty {
+  opacity: 0;
+}
+.heart:hover .full {
+  opacity: 1;
+}
+
+/* RESTAURANT PAGES CARDS */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 40px;
+  width: 100%;
+}
+.menu .starter, .menu .main-course, .menu .dessert {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: normal;
+  gap: 12px;
+  width: inherit;
+}
+.menu .starter h3.title, .menu .main-course h3.title, .menu .dessert h3.title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.menu .menu-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+  width: inherit;
+}
+.menu .menu-deco {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 2px;
+  border: 1px solid #99E2D0;
+}
+
+/* SLIDER ANIMATION */
+.starter .menu-cards {
+  animation: slide 1s ease;
+}
+
+.main-course .menu-cards {
+  animation: slide 1.3s ease;
+}
+
+.dessert .menu-cards {
+  animation: slide 1.5s ease;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.menu-cards .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  /* sert à caché les bords qui depasse de la div check */
+  overflow: hidden;
+  max-height: 70px;
+}
+.menu-cards .cards .name {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: normal;
+  width: 80%;
+  padding: 15px;
+}
+.menu-cards .cards .name .title, .menu-cards .cards .name .complement {
+  width: 100%;
+}
+.menu-cards .cards .name .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  font-weight: unset;
+}
+.menu-cards .cards .name .complement {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: lighter;
+}
+.menu-cards .cards .price {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  transition: transform 1s ease;
+}
+.menu-cards .cards .price p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 15px;
+  font-weight: bold;
+}
+.menu-cards .cards .check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: unset;
+  position: absolute;
+  top: 0;
+  right: -70px;
+  height: 70px;
+  width: 70px;
+  background-color: #99E2D0;
+  transition: transform 1s ease;
+}
+.menu-cards .cards .check i {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+.menu-cards .cards:hover .name .title, .menu-cards .cards:hover .name .complement {
+  max-width: calc(100% - 70px); /* reduit la taille du conteneur de 70px */
+  overflow: hidden; /* empêche le texte sorti d'etre visible hors du conteneur */
+  white-space: nowrap; /* évite que le texte se mette sur plusieurs lignes */
+  text-overflow: ellipsis; /* ajoute des points de suspensions si texte dépasse du conteneur */
+}
+.menu-cards .cards:hover .price {
+  transform: translateX(-70px);
+}
+.menu-cards .cards:hover .check {
+  transform: translateX(-70px);
+}
+@media (min-width: 768px) {
+  .menu-cards .cards {
+    width: 100%;
+  }
+}
+
+/****** FOOTER ***********/
+.footer {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+.footer .title {
+  font-family: "Shrikhand", "cursive";
+  font-size: 18px;
+  font-weight: normal;
+  padding: 15px 15px 0px 15px;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 15px;
+  }
+  .footer .title {
+    padding: 0px 15px 0px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px 30px; /* 40px 30px*/
+    gap: 16px;
+  }
+  .footer .title {
+    padding: 0px 15px 0px 15px;
+  }
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+.footer-list .footer-links a {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .footer-list {
+    flex-direction: row;
+    gap: 35px;
+    align-items: flex-end;
+    padding: 0px; /*15*/
+  }
+}
+@media (min-width: 1024px) {
+  .footer-list {
+    flex-direction: row;
+    gap: 35px;
+    align-items: flex-end;
+    padding: 0px; /*15*/
+  }
+}
+
+.proposition-and-partnership, .information-and-contact {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .proposition-and-partnership, .information-and-contact {
+    display: flex;
+    gap: 7px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .proposition-and-partnership, .information-and-contact {
+    display: flex;
+    gap: 7px;
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-light {
+  font-weight: lighter;
+}
+
+/****** MAIN ***********/
+.main-content {
+  background-color: #F6F6F6;
+}
+
+/****** MAIN - STEPS SECTION ***********/
+.steps {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 15px;
+  padding: 18px;
+}
+.steps .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .steps {
+    padding-left: 90px;
+    padding-right: 90px;
+    gap: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .steps {
+    padding: 50px 180px;
+    gap: 25px;
+  }
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 25px;
+}
+.steps-list .dot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  right: unset;
+  bottom: unset;
+  cursor: auto;
+  background-color: #9356DC;
+}
+.steps-list .dot .icon-number {
+  font-size: 10px;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .steps-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/****** MAIN - RESTAURANTS SECTION ***********/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
+  gap: 15px;
+  padding: 18px;
+}
+.restaurants .title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .restaurants {
+    padding-left: 90px;
+    padding-right: 90px;
+    gap: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+    gap: 28px;
+  }
+}
+
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+}
+.restaurants-cards .label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  width: 80px;
+  height: 29px;
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  top: 15px;
+  left: unset;
+  right: 20px;
+  bottom: unset;
+  cursor: auto;
+  background-color: #99E2D0;
+}
+.restaurants-cards .label .label-text {
+  font-size: 14px;
+  color: #008766;
+}
+@media (min-width: 768px) {
+  .restaurants-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+}
+
+.loader {
+  position: fixed;
+  height: 0; /* 100vh*/
+  width: 0; /* 100vw*/
+  background-color: #FFFFFF;
+  z-index: 1000;
+  margin: auto;
+  /* LOADER ANIMATION */
+  animation: load 2.2s ease;
+  opacity: 1;
+}
+@keyframes load {
+  0% {
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1; /* pour une transition fluide */
+  }
+  99% {
+    height: 100vh; /* pour une transition fluide */
+    width: 100vw;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+}
+.loader .loader-icon {
+  font-size: 70px;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 40%;
+  left: 45%;
+  animation: spin 2.2s ease;
+  opacity: 0;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(390deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  .loader .loader-icon {
+    font-size: 85px;
+    top: 40%;
+    left: 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .loader .loader-icon {
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+  }
+}/*# sourceMappingURL=homepage.css.map */

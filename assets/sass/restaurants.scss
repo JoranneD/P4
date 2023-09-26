@@ -1,0 +1,107 @@
+/****** UTILS ***********/
+@import '../sass/utils/index';
+
+/****** COMPONENTS ***********/
+@import '../sass/components/header';
+@import '../sass/components/card';
+@import '../sass/components/footer';
+
+
+
+/****** BODY ***********/
+.main-container {
+   gap:0px;
+}
+
+.main-content {
+    @media (min-width: $tablet) {
+       background-color: $white;
+    }
+}
+
+.main-image {
+    width: 100%;
+    max-height: 250px;
+    
+    @media (min-width: $tablet) {
+        height: 340px;
+    }
+}
+
+.return {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    a {
+        @include font-link();
+    }
+
+    i {
+        font-size: 24px;
+    }
+}
+
+/****** MAIN ***********/
+.selection {
+    background-color: $light-grey;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    bottom: 50px;
+    padding: 20px 15px 0px 15px;
+    @include flex($direction:column,$align:flex-start,$justify:normal,$gap:40px);
+
+    padding-bottom: 40px;
+    margin-bottom: -49px;
+
+    .title {
+        @include typo();
+    }
+
+    .heart {
+        top: 28px;
+        right: 28px;
+    }
+
+    .btn {
+        align-self: center;
+        &-purple {
+            padding: 0px 45px;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items:center;
+
+        .heart {
+            right: 150px;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        width: 40%;
+        padding: 45px 250px 40px 250px;
+
+        .heart {
+            right: 344px;
+            top: 54px;
+        }
+    }
+}
+
+.selection-description{
+    @include flex($justify:space-between,$gap:30px);
+
+    .heart {
+        position: initial;
+    }
+}
+
+/****** FOOTER ***********/
+.footer-list {
+    @media (min-width: $tablet) {
+        gap: 10px;
+    }
+}

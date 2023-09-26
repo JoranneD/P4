@@ -1,0 +1,177 @@
+/****** UTILS ***********/
+@import '../sass/utils/index';
+
+/****** COMPONENTS ***********/
+@import '../sass/components/header';
+@import '../sass/components/card';
+@import '../sass/components/footer';
+
+
+/****** MAIN ***********/
+.main-content {
+    background-color: $light-grey;
+}
+ 
+ /****** MAIN - STEPS SECTION ***********/
+.steps {
+    background-color: $white;
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:15px);
+    padding: 18px;
+    .title {
+        @include typo($font:$font-text, $size: 24px, $weight: bold);
+    }
+
+    @media (min-width: $tablet) {
+        padding-left: 90px;
+        padding-right: 90px;
+        gap: 25px;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 50px 180px;
+        gap: 25px;
+    }
+}
+
+.steps-list {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:25px);
+    .dot {
+        @include flex();
+        @include button($width:24px,$height:24px,$border:none,$radius:50%);
+        @include position($top:25px,$left:-10px);
+        cursor: auto;
+        background-color: $round-background;
+        .icon-number {
+            font-size: 10px;
+            color: $white;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/****** MAIN - RESTAURANTS SECTION ***********/
+.restaurants {
+    @include flex($direction:column,$align:normal);
+    padding: 18px;
+    .title {
+        @include typo($font: $font-text, $size: 24px, $weight: bold);
+    }
+
+    @media (min-width: $tablet) {
+        padding-left: 90px;
+        padding-right: 90px;
+        gap: 14px;
+    }
+
+    @media (min-width: $desktop) {
+        padding-left: 180px;
+        padding-right: 180px;
+        gap: 28px;
+    }
+}
+
+.restaurants-cards {
+    @include flex($direction:column,$align:normal,$justify:normal,$gap:20px);
+    .label {
+        @include flex();
+        @include button($width:80px,$height:29px,$border:none,$radius:2px);
+        @include position($top:15px,$right:20px);
+        cursor: auto;
+        background-color: #99E2D0;
+        .label-text {
+            font-size: 14px;
+            color: $square-text;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+
+    @media (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+}
+
+.loader {
+    position: fixed;
+    height: 0; /* 100vh*/
+    width: 0; /* 100vw*/
+    background-color: $white;
+    z-index: 1000;
+    margin: auto;
+    /* LOADER ANIMATION */
+   animation: load 2.2s ease;
+    opacity: 1;
+
+    @keyframes load {
+        0%{
+            height: 100vh;
+            width: 100vw;
+            opacity: 1;
+        }
+        95%{
+            opacity: 1; /* pour une transition fluide */
+        }
+        99%{
+            height: 100vh; /* pour une transition fluide */
+            width: 100vw;
+        }
+        100%{
+            height: 0;
+            width: 0;
+            opacity: 1;
+        }
+    }
+
+    .loader-icon{
+        font-size: 70px;
+        background: -webkit-linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        top: 40%;
+        left: 45%;
+        animation: spin 2.2s ease;
+        opacity: 0;
+
+        @keyframes spin {
+            0%{
+                transform: rotate(390deg);
+                opacity:1;
+            }
+
+            25%{
+                opacity:1;
+            }
+
+            100%{
+                transform: rotate(0deg);
+                opacity:0;
+            }
+        }
+
+        @media (min-width: $tablet) {
+            font-size: 85px;
+            top: 40%;
+            left: 48%;
+        }
+
+        @media (min-width: $desktop) {
+            font-size: 100px;
+            top: 50%;
+            left: 50%;
+        }
+     }
+}
